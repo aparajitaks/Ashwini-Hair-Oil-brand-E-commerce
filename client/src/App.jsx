@@ -15,7 +15,6 @@ import { Footer } from './components/Footer';
 import { Toast } from './components/Toast';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { MobileCartBar } from './components/MobileCartBar';
-import { OffersBanner } from './components/OffersBanner';
 
 export const App = () => {
   const [products, setProducts] = useState([]);
@@ -143,9 +142,6 @@ export const App = () => {
       />
 
       <TrustBar />
-
-      {/* Signature Pack of 3 Offer Banner */}
-      <OffersBanner onShopPackOf3={() => { setActiveCategory('combos'); scrollToCatalog(); }} />
 
       {/* Main Catalog */}
       <section className="catalog-section" id="catalog">

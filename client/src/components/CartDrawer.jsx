@@ -159,7 +159,7 @@ export const CartDrawer = () => {
             {/* Actions */}
             <div className="checkout-btn-group">
               <button className="btn-whatsapp-order" onClick={handleWhatsAppOrder}>
-                <span>💬</span>
+                <img src="/whatsapp.png" alt="WhatsApp" className="whatsapp-btn-icon" />
                 <span>Order via WhatsApp (1-Click)</span>
               </button>
               <button className="btn-regular-checkout" onClick={openCheckout}>

@@ -66,7 +66,8 @@ export const Footer = ({ onSelectCategory }) => {
                 <a href="#faq">Shipping & Returns Policy</a>
               </li>
               <li>
-                <a href="https://wa.me/919845012345" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/919845012345" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                  <img src="/whatsapp.png" alt="WhatsApp" className="whatsapp-footer-icon" />
                   Direct WhatsApp Support
                 </a>
               </li>

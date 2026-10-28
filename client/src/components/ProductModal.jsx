@@ -88,7 +88,7 @@ export const ProductModal = () => {
               </button>
 
               <button className="modal-btn-whatsapp" onClick={handleDirectWhatsAppBuy} title="Buy directly on WhatsApp">
-                <span>💬</span>
+                <img src="/whatsapp.png" alt="WhatsApp" className="whatsapp-btn-icon" />
                 <span>WhatsApp Buy</span>
               </button>
             </div>

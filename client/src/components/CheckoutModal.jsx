@@ -225,7 +225,7 @@ export const CheckoutModal = () => {
                   rel="noopener noreferrer"
                   className="btn-whatsapp-order"
                 >
-                  <span>💬</span>
+                  <img src="/whatsapp.png" alt="WhatsApp" className="whatsapp-btn-icon" />
                   <span>Send Order Summary to WhatsApp Hotline</span>
                 </a>
               )}

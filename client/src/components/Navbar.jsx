@@ -61,7 +61,7 @@ export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
               className="btn-whatsapp-header"
               title="Chat on WhatsApp"
             >
-              <span>💬</span>
+              <img src="/whatsapp.png" alt="WhatsApp" className="whatsapp-nav-icon" />
               <span>WhatsApp</span>
             </a>
 

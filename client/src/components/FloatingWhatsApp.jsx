@@ -7,9 +7,10 @@ export const FloatingWhatsApp = () => {
       target="_blank"
       rel="noopener noreferrer"
       className="floating-whatsapp"
-      title="Chat with Herbal Expert"
+      title="Chat with Herbal Expert on WhatsApp"
+      aria-label="Chat on WhatsApp"
     >
-      💬
+      <img src="/whatsapp.png" alt="WhatsApp" className="floating-whatsapp-icon" />
     </a>
   );
 };
