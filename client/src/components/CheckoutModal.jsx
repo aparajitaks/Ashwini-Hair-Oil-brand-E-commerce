@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
+import { useLanguage } from '../context/LanguageContext';
 import { api } from '../api/client';
 
 export const CheckoutModal = () => {
@@ -12,6 +13,7 @@ export const CheckoutModal = () => {
     clearCart,
     showToast
   } = useCart();
+  const { t } = useLanguage();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -171,15 +173,15 @@ export const CheckoutModal = () => {
 
         {!confirmedOrder ? (
           <div>
-            <h3 className="checkout-form-title">Shipping & Order Details</h3>
+            <h3 className="checkout-form-title">{t('checkoutTitle')}</h3>
             <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', marginBottom: '14px' }}>
-              Enter your delivery address below to place your order via Express Backend.
+              {t('checkoutSub')}
             </p>
 
             <form onSubmit={handleSubmit}>
               <div className="form-grid">
                 <div className="form-group full">
-                  <label htmlFor="name">Full Name *</label>
+                  <label htmlFor="name">{t('fullName')}</label>
                   <input
                     type="text"
                     id="name"
@@ -192,7 +194,7 @@ export const CheckoutModal = () => {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="phone">WhatsApp Phone *</label>
+                  <label htmlFor="phone">{t('phone')}</label>
                   <input
                     type="tel"
                     id="phone"
@@ -205,7 +207,7 @@ export const CheckoutModal = () => {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="pincode">Pincode *</label>
+                  <label htmlFor="pincode">{t('pincode')}</label>
                   <input
                     type="text"
                     id="pincode"
@@ -218,7 +220,7 @@ export const CheckoutModal = () => {
                   />
                 </div>
                 <div className="form-group full">
-                  <label htmlFor="address">Complete Street Address *</label>
+                  <label htmlFor="address">{t('address')}</label>
                   <textarea
                     id="address"
                     name="address"
@@ -231,7 +233,7 @@ export const CheckoutModal = () => {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="city">City / Town *</label>
+                  <label htmlFor="city">{t('city')}</label>
                   <input
                     type="text"
                     id="city"
@@ -244,7 +246,7 @@ export const CheckoutModal = () => {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="state">State *</label>
+                  <label htmlFor="state">{t('state')}</label>
                   <input
                     type="text"
                     id="state"
@@ -261,7 +263,7 @@ export const CheckoutModal = () => {
               {/* Payment selector */}
               <div style={{ marginTop: '18px' }}>
                 <label style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--primary-deep)', display: 'block', marginBottom: '8px' }}>
-                  Select Payment Mode:
+                  {t('selectPayment')}
                 </label>
                 <div className="payment-method-selector">
                   <div
@@ -270,8 +272,8 @@ export const CheckoutModal = () => {
                   >
                     <span>💳</span>
                     <div>
-                      <div>Razorpay Online</div>
-                      <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>UPI, Cards, Netbanking, Wallets</div>
+                      <div>{t('razorpayOnline')}</div>
+                      <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{t('razorpaySub')}</div>
                     </div>
                   </div>
                   <div
@@ -280,8 +282,8 @@ export const CheckoutModal = () => {
                   >
                     <span>💵</span>
                     <div>
-                      <div>Cash on Delivery</div>
-                      <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Pay cash/UPI at doorstep</div>
+                      <div>{t('cod')}</div>
+                      <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{t('codSub')}</div>
                     </div>
                   </div>
                 </div>
@@ -294,7 +296,7 @@ export const CheckoutModal = () => {
                   style={{ width: '100%', justifyContent: 'center' }}
                   disabled={submitting}
                 >
-                  <span>{submitting ? 'Confirming...' : `Confirm & Place Order (₹${totals.grandTotal})`}</span>
+                  <span>{submitting ? 'Confirming...' : `${t('confirmAndPlace')} (₹${totals.grandTotal})`}</span>
                 </button>
               </div>
             </form>
@@ -302,7 +304,7 @@ export const CheckoutModal = () => {
         ) : (
           <div className="order-success-box">
             <div className="success-icon">✓</div>
-            <h3>Order Placed Successfully!</h3>
+            <h3>{t('orderSuccessTitle')}</h3>
             <div className="order-id-badge">Order #{confirmedOrder.orderId}</div>
             <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', marginBottom: '24px' }}>
               Thank you for choosing Ashwini Herbal! We have saved your order in MongoDB and our specialists are packaging your herbal products.

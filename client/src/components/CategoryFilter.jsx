@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 export const CategoryFilter = ({
   categories,
@@ -10,6 +11,8 @@ export const CategoryFilter = ({
   onSortChange,
   searchInputRef
 }) => {
+  const { t } = useLanguage();
+
   return (
     <div className="filter-wrapper">
       {/* Category Tabs: Exactly matching the navbar links */}
@@ -37,7 +40,7 @@ export const CategoryFilter = ({
               ref={searchInputRef}
               type="text"
               className="search-input"
-              placeholder="Search herbs, aloevera, hair, saffron..."
+              placeholder={t('searchPlaceholder')}
               value={searchTerm}
               onChange={(e) => onSearchChange(e.target.value)}
               autoComplete="off"
@@ -50,11 +53,10 @@ export const CategoryFilter = ({
             onChange={(e) => onSortChange(e.target.value)}
             aria-label="Sort products"
           >
-            <option value="featured">Featured First</option>
-            <option value="price-asc">Price: Low to High</option>
-            <option value="price-desc">Price: High to Low</option>
-            <option value="rating">Highest Rated</option>
-            <option value="discount">Biggest Savings</option>
+            <option value="featured">{t('sortFeatured')}</option>
+            <option value="price-asc">{t('sortPriceLow')}</option>
+            <option value="price-desc">{t('sortPriceHigh')}</option>
+            <option value="rating">{t('sortRating')}</option>
           </select>
         </div>
       </div>

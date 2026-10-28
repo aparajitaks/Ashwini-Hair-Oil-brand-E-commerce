@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useCart } from '../context/CartContext';
+import { useLanguage } from '../context/LanguageContext';
 
 export const Hero = ({ onExploreClick, onSelectCategory }) => {
   const { openQuickView } = useCart();
+  const { t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -189,7 +191,7 @@ export const Hero = ({ onExploreClick, onSelectCategory }) => {
               className="btn-secondary"
               onClick={() => openQuickView(activeSlide.product)}
             >
-              <span>Quick View Product</span>
+              <span>{t('quickView')}</span>
             </button>
           </div>
 

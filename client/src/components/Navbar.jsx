@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
+import { useLanguage } from '../context/LanguageContext';
 
 export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
   const { totals, openCart } = useCart();
+  const { language, setLanguage, t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'all', label: 'Shop All' },
-    { id: 'haircare', label: 'Hair Care' },
-    { id: 'skincare', label: 'Skin Care' },
-    { id: 'babycare', label: 'Baby Care' },
-    { id: 'combos', label: 'Combo' }
+    { id: 'all', label: t('navAll') },
+    { id: 'haircare', label: t('navHair') },
+    { id: 'skincare', label: t('navSkin') },
+    { id: 'babycare', label: t('navBaby') },
+    { id: 'combos', label: t('navCombo') }
   ];
 
   return (
@@ -18,7 +20,7 @@ export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
       {/* Top Announcement Bar */}
       <div className="top-bar">
         <div className="container">
-          🌿 Festive Herbal Offer: Use coupon <strong>AYURVEDA10</strong> for 10% OFF | Free Express Shipping on Pack of 3 Deals & Orders over ₹499!
+          {t('announcement')}
         </div>
       </div>
 
@@ -29,7 +31,7 @@ export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
             <img src="/logo.jpg" alt="Ashwini Herbal Logo" className="brand-logo-img" />
             <div className="brand-text">
               <h1>Ashwini</h1>
-              <span>Herbal • Pure You</span>
+              <span>{t('brandTag')}</span>
             </div>
           </a>
 
@@ -54,6 +56,27 @@ export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
 
           {/* Header Actions */}
           <div className="header-actions">
+            {/* Language Selection: English / Kannada */}
+            <div className="language-selector" title="Choose Language / ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ">
+              <button
+                type="button"
+                className={`lang-btn ${language === 'en' ? 'active' : ''}`}
+                onClick={() => setLanguage('en')}
+                aria-label="English"
+              >
+                EN
+              </button>
+              <span className="lang-divider">|</span>
+              <button
+                type="button"
+                className={`lang-btn ${language === 'kn' ? 'active' : ''}`}
+                onClick={() => setLanguage('kn')}
+                aria-label="ಕನ್ನಡ"
+              >
+                ಕನ್ನಡ
+              </button>
+            </div>
+
             <a
               href="https://wa.me/919845012345?text=Hello%20Ashwini%20Herbal,%20I%20would%20like%20to%20know%20more%20about%20your%20Ayurvedic%20products!"
               target="_blank"
@@ -62,7 +85,7 @@ export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
               title="Chat on WhatsApp"
             >
               <img src="/whatsapp.png" alt="WhatsApp" className="whatsapp-nav-icon" />
-              <span>WhatsApp</span>
+              <span>{t('whatsapp')}</span>
             </a>
 
             <button className="cart-btn" onClick={openCart} aria-label="Open Shopping Cart">
@@ -87,6 +110,27 @@ export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
           <div style={{ background: 'var(--bg-card)', padding: '16px 24px', borderBottom: '1px solid var(--border-light)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', paddingBottom: '10px', borderBottom: '1px solid var(--border-subtle)' }}>
+              <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)' }}>🌐 Language / ಭಾಷೆ:</span>
+              <div className="language-selector">
+                <button
+                  type="button"
+                  className={`lang-btn ${language === 'en' ? 'active' : ''}`}
+                  onClick={() => { setLanguage('en'); setMobileMenuOpen(false); }}
+                >
+                  English
+                </button>
+                <span className="lang-divider">|</span>
+                <button
+                  type="button"
+                  className={`lang-btn ${language === 'kn' ? 'active' : ''}`}
+                  onClick={() => { setLanguage('kn'); setMobileMenuOpen(false); }}
+                >
+                  ಕನ್ನಡ
+                </button>
+              </div>
+            </div>
+
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {navItems.map(item => (
                 <li key={item.id}>

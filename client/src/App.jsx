@@ -15,17 +15,19 @@ import { Footer } from './components/Footer';
 import { Toast } from './components/Toast';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { MobileCartBar } from './components/MobileCartBar';
+import { useLanguage } from './context/LanguageContext';
 
 export const App = () => {
+  const { t } = useLanguage();
   const [products, setProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
-  const [categories, setCategories] = useState([
-    { id: "all", name: "Shop All", icon: "✨" },
-    { id: "haircare", name: "Hair Care", icon: "💆‍♀️" },
-    { id: "skincare", name: "Skin Care", icon: "🌿" },
-    { id: "babycare", name: "Baby Care", icon: "👶" },
-    { id: "combos", name: "Combo", icon: "🎁" }
-  ]);
+  const displayedCategories = [
+    { id: "all", name: t('navAll'), icon: "✨" },
+    { id: "haircare", name: t('navHair'), icon: "💆‍♀️" },
+    { id: "skincare", name: t('navSkin'), icon: "🌿" },
+    { id: "babycare", name: t('navBaby'), icon: "👶" },
+    { id: "combos", name: t('navCombo'), icon: "🎁" }
+  ];
   const [testimonials, setTestimonials] = useState([]);
   const [faqs, setFaqs] = useState([]);
 
@@ -147,15 +149,15 @@ export const App = () => {
       <section className="catalog-section" id="catalog">
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">Authentic Herbal Catalog (MERN)</span>
-            <h3 className="section-title">Explore Our Ayurvedic Creations</h3>
+            <span className="section-tag">{t('catalogTag')}</span>
+            <h3 className="section-title">{t('catalogTitle')}</h3>
             <p className="section-subtitle">
-              Pure formulations designed for your skin and hair wellness. Select a category or search below.
+              {t('catalogSubtitle')}
             </p>
           </div>
 
           <CategoryFilter
-            categories={categories}
+            categories={displayedCategories}
             activeCategory={activeCategory}
             onSelectCategory={setActiveCategory}
             searchTerm={searchTerm}

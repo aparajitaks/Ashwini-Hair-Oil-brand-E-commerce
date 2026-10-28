@@ -1,8 +1,10 @@
 import React from 'react';
 import { useCart } from '../context/CartContext';
+import { useLanguage } from '../context/LanguageContext';
 
 export const ProductCard = ({ product }) => {
   const { cart, addToCart, updateQuantity, openQuickView } = useCart();
+  const { t } = useLanguage();
 
   const cartItem = cart.find(item => item.product.id === product.id);
   const quantity = cartItem ? cartItem.quantity : 0;
@@ -52,7 +54,7 @@ export const ProductCard = ({ product }) => {
               className="btn-add-cart"
               onClick={() => addToCart(product, 1)}
             >
-              <span>+ Add</span>
+              <span>{t('addToBasket')}</span>
             </button>
           ) : (
             <div className="card-qty-stepper">

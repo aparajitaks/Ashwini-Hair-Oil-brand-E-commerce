@@ -1,35 +1,38 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 export const TrustBar = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="trust-bar">
       <div className="container trust-grid">
         <div className="trust-item">
           <div className="trust-icon">🌱</div>
           <div>
-            <h4>100% Herbal & Pure</h4>
-            <p>Hand-selected medicinal botanicals</p>
+            <h4>{t('t1Title')}</h4>
+            <p>{t('t1Sub')}</p>
           </div>
         </div>
         <div className="trust-item">
           <div className="trust-icon">⚗️</div>
           <div>
-            <h4>Small Batch Handcrafted</h4>
-            <p>Preserving natural vital phytonutrients</p>
+            <h4>{t('t2Title')}</h4>
+            <p>{t('t2Sub')}</p>
           </div>
         </div>
         <div className="trust-item">
           <div className="trust-icon">🧪</div>
           <div>
-            <h4>Zero Harmful Chemicals</h4>
-            <p>No parabens, SLS, or synthetic fragrance</p>
+            <h4>{t('t3Title')}</h4>
+            <p>{t('t3Sub')}</p>
           </div>
         </div>
         <div className="trust-item">
           <div className="trust-icon">📦</div>
           <div>
-            <h4>Free Pan-India Delivery</h4>
-            <p>On all soap bundles & combos</p>
+            <h4>{t('t4Title')}</h4>
+            <p>{t('t4Sub')}</p>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
+import { useLanguage } from '../context/LanguageContext';
 
 export const CartDrawer = () => {
   const {
@@ -15,6 +16,7 @@ export const CartDrawer = () => {
     openCheckout,
     buildWhatsAppOrderUrl
   } = useCart();
+  const { t } = useLanguage();
 
   const [couponInput, setCouponInput] = useState('');
 
@@ -40,7 +42,7 @@ export const CartDrawer = () => {
         <div className="drawer-header">
           <h3>
             <span>🛍️</span>
-            <span>Your Herbal Basket ({totals.totalItems})</span>
+            <span>{t('cartTitle')} ({totals.totalItems})</span>
           </h3>
           <button className="drawer-close" onClick={closeCart} aria-label="Close Cart">
             ✕
@@ -160,10 +162,10 @@ export const CartDrawer = () => {
             <div className="checkout-btn-group">
               <button className="btn-whatsapp-order" onClick={handleWhatsAppOrder}>
                 <img src="/whatsapp.png" alt="WhatsApp" className="whatsapp-btn-icon" />
-                <span>Order via WhatsApp (1-Click)</span>
+                <span>{t('orderWhatsApp')}</span>
               </button>
               <button className="btn-regular-checkout" onClick={openCheckout}>
-                <span>Proceed to Checkout</span>
+                <span>{t('proceedCheckout')}</span>
                 <span>→</span>
               </button>
             </div>
