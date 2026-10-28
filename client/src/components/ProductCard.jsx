@@ -4,7 +4,6 @@ import { useCart } from '../context/CartContext';
 export const ProductCard = ({ product }) => {
   const { cart, addToCart, updateQuantity, openQuickView } = useCart();
 
-  const discountPercent = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
   const cartItem = cart.find(item => item.product.id === product.id);
   const quantity = cartItem ? cartItem.quantity : 0;
 
@@ -13,7 +12,6 @@ export const ProductCard = ({ product }) => {
       <div className="card-image-box" onClick={() => openQuickView(product)}>
         <img src={product.image} alt={product.name} loading="lazy" />
         <span className="card-badge">{product.badge}</span>
-        <span className="card-discount-tag">{discountPercent}% OFF</span>
 
         <div className="card-quick-actions">
           <button

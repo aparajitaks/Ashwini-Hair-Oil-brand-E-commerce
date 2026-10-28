@@ -54,12 +54,6 @@ export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
 
           {/* Header Actions */}
           <div className="header-actions">
-            <div className="search-trigger" onClick={onFocusSearch}>
-              <span>🔍</span>
-              <span>Search herbs...</span>
-              <kbd>/</kbd>
-            </div>
-
             <a
               href="https://wa.me/919845012345?text=Hello%20Ashwini%20Herbal,%20I%20would%20like%20to%20know%20more%20about%20your%20Ayurvedic%20products!"
               target="_blank"
@@ -108,17 +102,6 @@ export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
                   </button>
                 </li>
               ))}
-              <li>
-                <button
-                  style={{ textAlign: 'left', width: '100%', padding: '6px 0', fontWeight: 600, color: 'var(--accent-gold-dark)' }}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    document.getElementById('quizSection')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  ✨ Take Ayurvedic Quiz
-                </button>
-              </li>
             </ul>
           </div>
         )}

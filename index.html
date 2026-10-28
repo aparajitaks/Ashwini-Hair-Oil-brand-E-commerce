@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ashwini Herbal | Pure Ayurvedic & Herbal Wellness Store</title>
   <meta name="description" content="Handcrafted Ayurvedic soaps, face serums, herbal hair oils, and pure baby care products. 100% natural, chemical-free, paraben-free. Free shipping on combos across India.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+  <link rel="icon" type="image/jpeg" href="products/logo.jpg">
+  <link rel="icon" type="image/png" sizes="128x128" href="products/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="products/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="products/logo.jpg">
 
-  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <!-- Google Fonts: Montserrat (Vedix Typography) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -47,12 +50,6 @@
 
       <!-- Header Actions -->
       <div class="header-actions">
-        <div class="search-trigger" id="searchTriggerBtn">
-          <span>🔍</span>
-          <span>Search herbs...</span>
-          <kbd>/</kbd>
-        </div>
-
         <a href="https://wa.me/919845012345?text=Hello%20Ashwini%20Herbal,%20I%20would%20like%20to%20know%20more%20about%20your%20Ayurvedic%20products!" target="_blank" class="btn-whatsapp-header" title="Chat on WhatsApp">
           <span>💬</span>
           <span>WhatsApp</span>
@@ -215,94 +212,6 @@
     </div>
   </section>
 
-  <!-- Ayurvedic Consultation Quiz Section -->
-  <section class="quiz-section" id="quizSection">
-    <div class="container">
-      <div class="quiz-card">
-        <div class="quiz-header">
-          <span class="section-tag">Ayurvedic Regimen Advisor</span>
-          <h3>Find Your Perfect Herbal Regimen</h3>
-          <p>Answer 2 quick questions to discover tailored botanicals for your skin & hair.</p>
-        </div>
-
-        <div class="quiz-steps-nav">
-          <div class="quiz-step-indicator active" id="quizStepIndicator1">
-            <span class="quiz-step-num">1</span>
-            <span>Primary Goal</span>
-          </div>
-          <div class="quiz-step-indicator" id="quizStepIndicator2">
-            <span class="quiz-step-num">2</span>
-            <span>Skin / Hair Type</span>
-          </div>
-          <div class="quiz-step-indicator" id="quizStepIndicator3">
-            <span class="quiz-step-num">3</span>
-            <span>Your Regimen</span>
-          </div>
-        </div>
-
-        <!-- Quiz Step 1: Goal -->
-        <div class="quiz-step-content" id="quizStep1">
-          <div class="quiz-options-grid">
-            <div class="quiz-option-btn" data-goal="pigmentation">
-              <div class="quiz-option-icon">✨</div>
-              <div class="quiz-option-title">Fade Pigmentation & Tan</div>
-              <div class="quiz-option-desc">Clear dark spots, melasma, and sun damage</div>
-            </div>
-            <div class="quiz-option-btn" data-goal="acne">
-              <div class="quiz-option-icon">🍃</div>
-              <div class="quiz-option-title">Control Acne & Oiliness</div>
-              <div class="quiz-option-desc">Purify pores with Neem, Charcoal & Tulsi</div>
-            </div>
-            <div class="quiz-option-btn" data-goal="hairfall">
-              <div class="quiz-option-icon">💆‍♀️</div>
-              <div class="quiz-option-title">Stop Hair Fall & Dandruff</div>
-              <div class="quiz-option-desc">Boost growth with Rosemary & 22 Herbs</div>
-            </div>
-            <div class="quiz-option-btn" data-goal="babycare">
-              <div class="quiz-option-icon">👶</div>
-              <div class="quiz-option-title">Gentle Baby Care</div>
-              <div class="quiz-option-desc">Tear-free almond massage & bath ritual</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Quiz Step 2: Skin Type -->
-        <div class="quiz-step-content" id="quizStep2" style="display: none;">
-          <div class="quiz-options-grid">
-            <div class="quiz-option-btn" data-type="oily">
-              <div class="quiz-option-icon">💧</div>
-              <div class="quiz-option-title">Oily / Combination</div>
-              <div class="quiz-option-desc">Greasy T-zone, prone to shine & breakouts</div>
-            </div>
-            <div class="quiz-option-btn" data-type="dry">
-              <div class="quiz-option-icon">🍂</div>
-              <div class="quiz-option-title">Dry / Dehydrated</div>
-              <div class="quiz-option-desc">Flaky, tight sensation after washing</div>
-            </div>
-            <div class="quiz-option-btn" data-type="sensitive">
-              <div class="quiz-option-icon">🌸</div>
-              <div class="quiz-option-title">Sensitive / Normal</div>
-              <div class="quiz-option-desc">Prone to redness or looking for pure maintenance</div>
-            </div>
-          </div>
-          <div style="text-align: center; margin-top: 10px;">
-            <button class="btn-secondary" id="quizBackBtn" style="color: var(--primary-deep); border-color: var(--border-light);">← Back</button>
-          </div>
-        </div>
-
-        <!-- Quiz Step 3: Result -->
-        <div class="quiz-step-content" id="quizStep3" style="display: none;">
-          <div class="quiz-result-box" id="quizResultBox">
-            <!-- Injected via app.js -->
-          </div>
-          <div style="text-align: center; margin-top: 20px;">
-            <button class="btn-secondary" id="quizRestartBtn" style="color: var(--primary-deep); border-color: var(--border-light);">↺ Take Quiz Again</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- About & Heritage Section -->
   <section class="about-section" id="aboutUs">
     <div class="container about-grid">
@@ -405,7 +314,7 @@
         <div class="footer-col">
           <h4>Customer Care</h4>
           <ul class="footer-links">
-            <li><a href="#quizSection">Ayurvedic Routine Quiz</a></li>
+            <li><a href="#aboutUs">About Ashwini Herbal</a></li>
             <li><a href="#offersBanner">Festive Deals & Combos</a></li>
             <li><a href="#reviews">Verified Reviews</a></li>
             <li><a href="#faq">Shipping & Returns Policy</a></li>

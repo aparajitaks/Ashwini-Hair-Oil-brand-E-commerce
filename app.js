@@ -70,7 +70,6 @@ function init() {
   renderProductGrid();
   renderTestimonials();
   renderFaqs();
-  initQuiz();
   updateCartUI();
   setupEventListeners();
 }
@@ -183,7 +182,6 @@ function renderProductGrid() {
         <div class="card-image-box" onclick="window.app.openQuickView('${product.id}')">
           <img src="${product.image}" alt="${product.name}" loading="lazy">
           <span class="card-badge">${product.badge}</span>
-          <span class="card-discount-tag">${discountPercent}% OFF</span>
 
           <div class="card-quick-actions">
             <button class="btn-quick-view" onclick="event.stopPropagation(); window.app.openQuickView('${product.id}')">
@@ -558,7 +556,6 @@ function openQuickView(productId) {
       <div class="modal-price-box">
         <span class="price">₹${product.price}</span>
         <span class="mrp">₹${product.originalPrice}</span>
-        <span class="discount-tag">${discountPercent}% OFF</span>
       </div>
 
       <p class="modal-desc">${product.description}</p>

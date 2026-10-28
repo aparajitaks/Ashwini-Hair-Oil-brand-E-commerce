@@ -54,7 +54,7 @@ export const Footer = ({ onSelectCategory }) => {
             <h4>Customer Care</h4>
             <ul className="footer-links">
               <li>
-                <a href="#quizSection">Ayurvedic Routine Quiz</a>
+                <a href="#aboutUs">About Ashwini Herbal</a>
               </li>
               <li>
                 <a href="#offersBanner">Festive Deals & Combos</a>

@@ -7,8 +7,6 @@ export const ProductModal = () => {
 
   if (!quickViewProduct) return null;
 
-  const discountPercent = Math.round(((quickViewProduct.originalPrice - quickViewProduct.price) / quickViewProduct.originalPrice) * 100);
-
   const handleAddAndClose = () => {
     addToCart(quickViewProduct, quantity);
     closeQuickView();
@@ -54,7 +52,6 @@ export const ProductModal = () => {
             <div className="modal-price-box">
               <span className="price">₹{quickViewProduct.price}</span>
               <span className="mrp">₹{quickViewProduct.originalPrice}</span>
-              <span className="discount-tag">{discountPercent}% OFF</span>
             </div>
 
             <p className="modal-desc">{quickViewProduct.description}</p>

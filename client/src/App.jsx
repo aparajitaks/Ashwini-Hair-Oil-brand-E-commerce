@@ -8,7 +8,6 @@ import { ProductGrid } from './components/ProductGrid';
 import { ProductModal } from './components/ProductModal';
 import { CartDrawer } from './components/CartDrawer';
 import { CheckoutModal } from './components/CheckoutModal';
-import { RoutineAdvisor } from './components/RoutineAdvisor';
 import { AboutSection } from './components/AboutSection';
 import { Testimonials } from './components/Testimonials';
 import { FAQSection } from './components/FAQSection';
@@ -16,6 +15,7 @@ import { Footer } from './components/Footer';
 import { Toast } from './components/Toast';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { MobileCartBar } from './components/MobileCartBar';
+import { OffersBanner } from './components/OffersBanner';
 
 export const App = () => {
   const [products, setProducts] = useState([]);
@@ -139,10 +139,13 @@ export const App = () => {
 
       <Hero
         onExploreClick={scrollToCatalog}
-        onCombosClick={handleCombosClick}
+        onSelectCategory={setActiveCategory}
       />
 
       <TrustBar />
+
+      {/* Signature Pack of 3 Offer Banner */}
+      <OffersBanner onShopPackOf3={() => { setActiveCategory('combos'); scrollToCatalog(); }} />
 
       {/* Main Catalog */}
       <section className="catalog-section" id="catalog">
@@ -173,8 +176,6 @@ export const App = () => {
           />
         </div>
       </section>
-
-      <RoutineAdvisor allProducts={allProducts.length ? allProducts : products} />
 
       <AboutSection />
 
