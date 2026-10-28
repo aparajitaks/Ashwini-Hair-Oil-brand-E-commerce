@@ -1,21 +1,16 @@
 {
-  "name": "ashwini-herbal-store",
+  "name": "ashwini-herbal-mern",
   "version": "1.0.0",
-  "description": "Ashwini Herbal Online Store - Handcrafted Ayurvedic & Herbal Wellness",
-  "main": "app.js",
+  "description": "Ashwini Herbal MERN Stack E-Commerce Application",
   "scripts": {
-    "start": "python3 -m http.server 3000",
-    "serve": "npx serve . -l 3000"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && PORT=5001 node --watch server.js",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd server && PORT=5001 node server.js",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
   },
-  "keywords": [
-    "ayurveda",
-    "herbal",
-    "ecommerce",
-    "ashwini-herbal",
-    "skincare",
-    "haircare",
-    "handmade-soaps"
-  ],
-  "author": "Ashwini Herbal",
-  "license": "ISC"
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }

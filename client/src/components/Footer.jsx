@@ -1,0 +1,96 @@
+import React from 'react';
+
+export const Footer = ({ onSelectCategory }) => {
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <h3>🌿 Ashwini Herbal</h3>
+            <span>Pure Herbal • Pure You (MERN Stack)</span>
+            <p>
+              Handcrafted Ayurvedic personal care products formulated with pure botanicals and sacred South Indian herbal wisdom. Delivered fresh to your home.
+            </p>
+            <div style={{ display: 'flex', gap: '10px', fontSize: '1.2rem' }}>
+              <span>📸</span>
+              <span>💬</span>
+              <span>📘</span>
+              <span>✉️</span>
+            </div>
+          </div>
+
+          <div className="footer-col">
+            <h4>Explore Shop</h4>
+            <ul className="footer-links">
+              <li>
+                <a href="#catalog" onClick={() => onSelectCategory('soaps')}>
+                  Handmade Soaps (₹179+)
+                </a>
+              </li>
+              <li>
+                <a href="#catalog" onClick={() => onSelectCategory('skincare')}>
+                  Kumkumadi Thailam
+                </a>
+              </li>
+              <li>
+                <a href="#catalog" onClick={() => onSelectCategory('haircare')}>
+                  Rosemary 22 Herbs Oil
+                </a>
+              </li>
+              <li>
+                <a href="#catalog" onClick={() => onSelectCategory('babycare')}>
+                  Pure Baby Massage Oil
+                </a>
+              </li>
+              <li>
+                <a href="#catalog" onClick={() => onSelectCategory('combos')}>
+                  Pack of 3 Soap Combos (₹449)
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Customer Care</h4>
+            <ul className="footer-links">
+              <li>
+                <a href="#quizSection">Ayurvedic Routine Quiz</a>
+              </li>
+              <li>
+                <a href="#offersBanner">Festive Deals & Combos</a>
+              </li>
+              <li>
+                <a href="#reviews">Verified Reviews</a>
+              </li>
+              <li>
+                <a href="#faq">Shipping & Returns Policy</a>
+              </li>
+              <li>
+                <a href="https://wa.me/919845012345" target="_blank" rel="noopener noreferrer">
+                  Direct WhatsApp Support
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-col footer-contact">
+            <h4>Order & Support</h4>
+            <p><span>📍</span> Ashwini Herbal Workshop, Bengaluru, Karnataka, India</p>
+            <p><span>📞</span> +91 98450 12345 (Mon - Sat, 9am - 7pm)</p>
+            <p><span>💬</span> WhatsApp Order Hotline: +91 98450 12345</p>
+            <p><span>✉️</span> care@ashwiniherbal.com</p>
+            <div style={{ marginTop: '14px', fontSize: '0.8rem', color: '#a2b7ac' }}>
+              💳 Accepted: UPI • GPay • PhonePe • COD • Cards
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <div>© 2026 Ashwini Herbal. Powered by MongoDB, Express, React, and Node.js.</div>
+          <div>Made with 🌿 in India • Safe, Natural, Chemical-Free</div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+

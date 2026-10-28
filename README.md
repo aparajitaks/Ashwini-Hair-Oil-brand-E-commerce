@@ -1,84 +1,193 @@
-# 🌿 Ashwini Herbal - Online Store & E-Commerce Website
+# 🌿 Ashwini Herbal — MERN Stack E-Commerce Store
 
-An online storefront designed and built for **Ashwini Herbal** (Pure Herbal • Pure You). The store showcases 18 handcrafted Ayurvedic and herbal products using authentic high-resolution product photography, labeled ingredients, pricing, and pack configurations directly from the workshop.
-
----
-
-## ✨ Features & Capabilities
-
-### 1. 🛍️ Rich Product Catalog (18 Handcrafted Items)
-- **Handmade Herbal Soaps**: Activated Bamboo Charcoal Soap (Pack of 3 - ₹449), Coffee Glow Tan Removal Soap (Pack of 3 - ₹449), Pure Manjistha Bathing Bar (₹179), and the 4-Bar Herbal Soap Variety Vault (₹599).
-- **Sacred Face & Skincare**: Kumkumadi Thailam Ayurvedic Glow Oil with Kashmir Saffron & Sandalwood (₹599), Manjista Face Wash for Pigmentation (₹349), Overnight Renewal Night Cream (₹499), Glow Drops Botanical Serum (₹429), Glow & Pigmentation Day Serum (₹399), Neem Aloevera Pimple Face Wash (₹299), and Pure 2-in-1 Aloevera Jell (₹279).
-- **Hair Care Solutions**: Rosemary Black Hair Oil with 22 Herbal Ingredients (200ml - ₹449) and the Hair Care Complete Trio with Shampoo & Powder Mask (₹849).
-- **Gentle Baby Care Range**: Baby Glowing Soap (Pack of 3 - ₹449), Pure Almond & Kashmir Kesari Baby Massage Oil (₹349), and the Complete 3-Piece Baby Care Bath Hamper (₹799).
-- **Signature Value Combos**: Pigmentation Day & Night Cream Duo (50g x 2 - ₹799) and the 4-in-1 Complete Glow Routine Bundle (₹749).
-
-### 2. 🎯 Multi-Faceted Filtering & Live Search
-- **Category Tabs**: All Products, Handmade Soaps, Face & Skincare, Hair Elixirs, Baby Care, and Value Combos.
-- **Concern Filter Chips**: Pigmentation & Dark Spots, Acne & Oily Skin, Dull Skin & Radiance, Hair Fall & Dandruff, and Gentle Baby Care.
-- **Real-Time Instant Search**: Fast, debounced search across names, herbs, and benefits with keyboard shortcut (`/`).
-- **Sorting Engine**: Featured, Price: Low to High, Price: High to Low, Highest Rated, and Biggest Discount.
-
-### 3. 🔍 Interactive Product Quick View
-- Click any card or "Quick View" to open high-resolution gallery view.
-- Ingredient breakdown cards detailing botanical roles (e.g. Saffron, Manjistha, Bhringraj, Goat Milk).
-- Proven benefits and Ayurvedic application directions.
-- Quantity counter with instant "Add to Basket" and direct "WhatsApp Buy".
-
-### 4. 🛒 Interactive Cart Drawer & Dynamic Free Shipping
-- Slide-over glassmorphism drawer showing total items and prices.
-- **Free Shipping Progress Bar**: Dynamic visual tracker unlocking free express shipping on orders over ₹499 or on combo packs.
-- **Promo Coupon System**:
-  - `AYURVEDA10`: Applies a 10% discount on entire cart.
-  - `ASHWINI50`: Applies flat ₹50 discount for first-time orders.
-- Quantity adjustments (+ / -) and item removal with live calculation.
-
-### 5. 💬 1-Click WhatsApp Direct Ordering
-- Automatically formats an order message containing itemized products, quantities, prices, discounts, subtotal, and customer delivery address.
-- Sends directly to Ashwini Herbal's WhatsApp business hotline (`+91 98450 12345`).
-
-### 6. 💳 Complete Checkout & Order Simulation
-- Full checkout form with Name, WhatsApp Mobile, Address, Pincode, City, and State.
-- Payment selection: Cash on Delivery (COD) or UPI / Google Pay.
-- Animated order confirmation screen with auto-generated Order ID (e.g. `#ASH-89241`) and instant WhatsApp confirmation link.
-
-### 7. 🔮 Interactive Ayurvedic Consultation Quiz
-- 30-Second interactive questionnaire assessing primary concerns and skin/hair types.
-- Suggests tailored Ayurvedic routine with 1-click bundle addition to cart.
+A full-stack e-commerce storefront for **Ashwini Herbal** built with **MongoDB, Express.js, React (Vite), and Node.js**. Showcases 18 handcrafted Ayurvedic products using authentic high-resolution product photography with a complete shopping experience including cart, coupons, checkout, and WhatsApp ordering.
 
 ---
 
-## 🚀 How to Run Locally
-
-You can run the store using any standard static server:
-
-### Option A: Using Python (Built-in)
-```bash
-cd /Users/veritan/Work/ashwini
-python3 -m http.server 3000
-```
-Then open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Option B: Using Node / npx
-```bash
-cd /Users/veritan/Work/ashwini
-npx serve . -l 3000
-```
-
-### Option C: Direct Browser Opening
-Simply double-click or open `/Users/veritan/Work/ashwini/index.html` in Safari, Chrome, Edge, or Firefox.
-
----
-
-## 📁 Project Structure
+## 🏗️ Architecture Overview
 
 ```
 /Users/veritan/Work/ashwini/
-├── index.html            # Main semantic storefront HTML5
-├── styles.css            # Custom luxury Ayurvedic design system & responsive layout
-├── app.js                # E-Commerce state, cart, filter, quiz, modal & WhatsApp engine
-├── products.js           # Master product catalog with verified labels, prices & ingredients
-├── package.json          # Project metadata & convenience scripts
-├── README.md             # Store documentation
-└── products/             # Authentic product photography (19 high-res images)
+├── server/                       ← Node.js + Express Backend
+│   ├── server.js                 ← Express entry point (port 5001)
+│   ├── .env                      ← PORT, MONGODB_URI
+│   ├── config/
+│   │   └── db.js                 ← Mongoose connect + auto-seed
+│   ├── models/
+│   │   ├── Product.js            ← Mongoose Product schema
+│   │   ├── Order.js              ← Mongoose Order schema
+│   │   └── Coupon.js             ← Mongoose Coupon schema
+│   ├── routes/
+│   │   ├── productRoutes.js      ← GET /api/products, /api/categories, etc.
+│   │   ├── orderRoutes.js        ← POST /api/orders
+│   │   ├── couponRoutes.js       ← POST /api/coupons/apply
+│   │   └── seedRoutes.js         ← POST /api/seed (re-seed MongoDB)
+│   └── data/
+│       └── productsData.js       ← Seed data (all 18 products + coupons)
+│
+├── client/                       ← React + Vite Frontend
+│   ├── vite.config.js            ← Dev proxy → localhost:5001
+│   ├── index.html                ← HTML entry point
+│   └── src/
+│       ├── main.jsx              ← ReactDOM.createRoot()
+│       ├── App.jsx               ← Root component, filter/sort state
+│       ├── index.css             ← Luxury Ayurvedic design system
+│       ├── api/
+│       │   └── client.js         ← fetch() wrappers for all API calls
+│       ├── context/
+│       │   └── CartContext.jsx   ← Global cart, coupons, modals, toasts
+│       └── components/
+│           ├── Navbar.jsx        ← Sticky header, nav, cart badge
+│           ├── Hero.jsx          ← Hero section with featured product
+│           ├── TrustBar.jsx      ← 4 trust badge icons
+│           ├── OffersBanner.jsx  ← Pack of 3 ₹449 callout
+│           ├── CategoryFilter.jsx← Category tabs, concern chips, search, sort
+│           ├── ProductCard.jsx   ← Individual product card with quick view
+│           ├── ProductGrid.jsx   ← Grid renderer with loading/empty states
+│           ├── ProductModal.jsx  ← Full product detail modal
+│           ├── CartDrawer.jsx    ← Slide-in cart with free-shipping bar
+│           ├── CheckoutModal.jsx ← Order form → POST /api/orders
+│           ├── RoutineAdvisor.jsx← 3-step Ayurvedic quiz
+│           ├── AboutSection.jsx  ← Brand story
+│           ├── Testimonials.jsx  ← Customer reviews
+│           ├── FAQSection.jsx    ← Accordion FAQ
+│           ├── Footer.jsx        ← Links, contact, copyright
+│           ├── Toast.jsx         ← Toast notification system
+│           ├── FloatingWhatsApp.jsx ← Floating WA button
+│           └── MobileCartBar.jsx ← Sticky mobile cart bar
+│
+├── products/                     ← 19 high-res product images (served statically)
+├── package.json                  ← Root dev/build/start scripts (concurrently)
+└── README.md
 ```
+
+---
+
+## 🚀 Running the App
+
+### Prerequisites
+- Node.js v18+ and npm
+- MongoDB (optional — app works in memory-fallback mode without it)
+
+### Development Mode (Both servers with hot-reload)
+
+```bash
+cd /Users/veritan/Work/ashwini
+npm run dev
+```
+
+This starts:
+- **Express API server** on http://localhost:5001 (with `--watch` for auto-reload)
+- **Vite dev server** on http://localhost:3000 (with API proxy to 5001)
+
+Open **http://localhost:3000** in your browser.
+
+### Production Mode (Single server)
+
+```bash
+# 1. Build React client
+npm run build
+
+# 2. Start Express server (serves built React app + API)
+npm start
+```
+
+Open **http://localhost:5001** in your browser.
+
+---
+
+## 📡 API Reference
+
+All endpoints are served at `http://localhost:5001/api/`
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/api/health` | Server & MongoDB status |
+| `GET` | `/api/products` | List products (filter by `category`, `concern`, `q`, `sort`) |
+| `GET` | `/api/products/:id` | Single product details |
+| `GET` | `/api/categories` | All product categories |
+| `GET` | `/api/concerns` | All skin/hair concerns |
+| `GET` | `/api/testimonials` | Customer testimonials |
+| `GET` | `/api/faqs` | FAQ list |
+| `POST` | `/api/coupons/apply` | Validate & apply a coupon code |
+| `POST` | `/api/orders` | Create a new order (returns WhatsApp URL) |
+| `GET` | `/api/orders/:id` | Fetch order by ID |
+| `POST` | `/api/seed` | Re-seed MongoDB from scratch |
+
+### Example API calls
+
+```bash
+# Get all Soaps
+curl "http://localhost:5001/api/products?category=soaps"
+
+# Search for "charcoal"
+curl "http://localhost:5001/api/products?q=charcoal"
+
+# Sort by Price (Low → High)
+curl "http://localhost:5001/api/products?sort=price-asc"
+
+# Apply coupon
+curl -X POST http://localhost:5001/api/coupons/apply \
+  -H "Content-Type: application/json" \
+  -d '{"code":"AYURVEDA10","subtotal":900}'
+
+# Place an order
+curl -X POST http://localhost:5001/api/orders \
+  -H "Content-Type: application/json" \
+  -d '{
+    "items": [{"productId": "charcoal-soap-pack-of-3", "quantity": 1}],
+    "customer": {"name":"Ananya","phone":"9845012345","address":"MG Road","city":"Bengaluru","state":"Karnataka","pincode":"560001"},
+    "paymentMethod": "COD"
+  }'
+```
+
+---
+
+## 🛒 Features
+
+| Feature | Details |
+|---------|---------|
+| **18 Products** | Soaps, Skincare, Haircare, Baby Care, Value Combos |
+| **Category Filtering** | 6 category tabs, all API-driven |
+| **Concern Chips** | Pigmentation, Acne, Dull Skin, Hair Fall, Baby Care |
+| **Live Search + Sort** | Debounced; full-text across name, ingredients, description |
+| **Product Quick View** | Modal with ingredients, benefits, directions, qty stepper |
+| **Cart Drawer** | Slide-in, shipping progress bar, localStorage persisted |
+| **Coupon System** | `AYURVEDA10` (10% off) · `ASHWINI50` (₹50 off) — API validated |
+| **Free Shipping Logic** | Auto-free on ₹499+ orders or any combo/3-pack bundle |
+| **WhatsApp 1-Click Order** | Pre-formatted order message sent to WhatsApp hotline |
+| **Checkout + Order API** | Full form → `POST /api/orders` → MongoDB or memory store |
+| **Ayurvedic Quiz** | 3-step skin/hair type advisor with product recommendation |
+| **MongoDB + Fallback** | Auto-seeds 18 products. Gracefully falls back to memory if MongoDB offline |
+| **Mobile Responsive** | Sticky mobile cart bar, collapsible nav, touch-friendly |
+
+---
+
+## 🍃 Enabling Persistent MongoDB
+
+Start MongoDB locally, then restart the server:
+
+```bash
+# macOS (via Homebrew)
+brew services start mongodb-community
+
+# Or start manually
+mongod --dbpath /usr/local/var/mongodb
+
+# Then restart the server — it will auto-seed 18 products + coupons
+npm start
+```
+
+### Re-seed database anytime:
+```bash
+curl -X POST http://localhost:5001/api/seed
+```
+
+---
+
+## 🎨 Coupon Codes
+
+| Code | Discount | Min Order |
+|------|----------|-----------|
+| `AYURVEDA10` | 10% off entire cart | No minimum |
+| `ASHWINI50` | ₹50 flat off | ₹300+ |

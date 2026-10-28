@@ -976,3 +976,4 @@ window.app = {
 
 // Start application
 document.addEventListener('DOMContentLoaded', init);
+
