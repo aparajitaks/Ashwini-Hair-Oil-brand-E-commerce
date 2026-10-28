@@ -150,6 +150,22 @@ img {
   text-decoration: none;
 }
 
+.brand-logo-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-gold);
+  box-shadow: 0 4px 12px rgba(25, 72, 51, 0.25);
+  background: #0e291d;
+  flex-shrink: 0;
+  transition: transform var(--trans-fast);
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.05);
+}
+
 .logo-badge {
   width: 46px;
   height: 46px;

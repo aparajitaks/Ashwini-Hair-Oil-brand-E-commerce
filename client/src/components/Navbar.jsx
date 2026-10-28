@@ -7,11 +7,10 @@ export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
 
   const navItems = [
     { id: 'all', label: 'Shop All' },
-    { id: 'soaps', label: 'Handmade Soaps' },
-    { id: 'skincare', label: 'Skincare' },
-    { id: 'haircare', label: 'Hair Elixirs' },
+    { id: 'haircare', label: 'Hair Care' },
+    { id: 'skincare', label: 'Skin Care' },
     { id: 'babycare', label: 'Baby Care' },
-    { id: 'combos', label: 'Value Combos' }
+    { id: 'combos', label: 'Combo' }
   ];
 
   return (
@@ -27,7 +26,7 @@ export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
       <header className="header" id="mainHeader">
         <div className="container header-inner">
           <a href="#" className="brand-logo" onClick={(e) => { e.preventDefault(); onSelectCategory('all'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-            <div className="logo-badge">🌿</div>
+            <img src="/logo.jpg" alt="Ashwini Herbal Logo" className="brand-logo-img" />
             <div className="brand-text">
               <h1>Ashwini</h1>
               <span>Herbal • Pure You</span>
@@ -50,14 +49,6 @@ export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
                   </button>
                 </li>
               ))}
-              <li>
-                <button
-                  className="nav-link"
-                  onClick={() => document.getElementById('quizSection')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Ayurvedic Quiz
-                </button>
-              </li>
             </ul>
           </nav>
 
