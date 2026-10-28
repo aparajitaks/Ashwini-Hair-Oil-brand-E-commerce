@@ -1,0 +1,21 @@
+{
+  "name": "ashwini-herbal-store",
+  "version": "1.0.0",
+  "description": "Ashwini Herbal Online Store - Handcrafted Ayurvedic & Herbal Wellness",
+  "main": "app.js",
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "serve": "npx serve . -l 3000"
+  },
+  "keywords": [
+    "ayurveda",
+    "herbal",
+    "ecommerce",
+    "ashwini-herbal",
+    "skincare",
+    "haircare",
+    "handmade-soaps"
+  ],
+  "author": "Ashwini Herbal",
+  "license": "ISC"
+}
