@@ -22,7 +22,7 @@ export const CheckoutModal = () => {
     state: ''
   });
 
-  const [paymentMethod, setPaymentMethod] = useState('COD');
+  const [paymentMethod, setPaymentMethod] = useState('RAZORPAY');
   const [submitting, setSubmitting] = useState(false);
   const [confirmedOrder, setConfirmedOrder] = useState(null);
 
@@ -32,37 +32,128 @@ export const CheckoutModal = () => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const handleRazorpayPayment = async (orderPayload) => {
+    try {
+      const config = await api.getPaymentConfig();
+      if (!config.isConfigured || !config.keyId) {
+        showToast('⚠️ Razorpay credentials pending in server/.env. Falling back to COD/WhatsApp order.');
+        const orderResult = await api.createOrder({ ...orderPayload, paymentMethod: 'COD' });
+        setConfirmedOrder(orderResult);
+        clearCart();
+        return;
+      }
+
+      if (!window.Razorpay) {
+        throw new Error('Razorpay SDK failed to load. Please check your internet connection.');
+      }
+
+      const rzpOrderData = await api.createRazorpayOrder(
+        totals.grandTotal,
+        `rcpt_${Date.now()}`,
+        { customerName: formData.name, customerPhone: formData.phone }
+      );
+
+      const options = {
+        key: config.keyId,
+        amount: rzpOrderData.order.amount,
+        currency: 'INR',
+        name: 'Ashwini Herbal',
+        description: 'Pure Ayurvedic & Herbal Wellness Order',
+        image: '/logo.jpg',
+        order_id: rzpOrderData.order.id,
+        prefill: {
+          name: formData.name.trim(),
+          contact: formData.phone.trim()
+        },
+        theme: {
+          color: '#194833'
+        },
+        handler: async function (response) {
+          try {
+            setSubmitting(true);
+            const verifyRes = await api.verifyRazorpayPayment({
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_signature: response.razorpay_signature,
+              orderDetails: {
+                ...orderPayload,
+                pricing: totals
+              }
+            });
+
+            setConfirmedOrder({
+              orderId: verifyRes.orderId,
+              customer: orderPayload.customer,
+              pricing: totals,
+              paymentMethod: 'ONLINE_RAZORPAY',
+              paymentStatus: 'PAID',
+              transactionId: response.razorpay_payment_id
+            });
+
+            clearCart();
+            showToast('Payment successful! 🌿 Order confirmed!');
+          } catch (verifyErr) {
+            showToast(verifyErr.message || 'Payment verification failed');
+          } finally {
+            setSubmitting(false);
+          }
+        },
+        modal: {
+          ondismiss: function () {
+            setSubmitting(false);
+            showToast('Payment window closed');
+          }
+        }
+      };
+
+      const razorpayInstance = new window.Razorpay(options);
+      razorpayInstance.on('payment.failed', function (resp) {
+        setSubmitting(false);
+        showToast(`Payment failed: ${resp.error.description}`);
+      });
+
+      razorpayInstance.open();
+    } catch (err) {
+      setSubmitting(false);
+      showToast(err.message || 'Could not initiate Razorpay payment');
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (cart.length === 0) return;
 
     setSubmitting(true);
-    try {
-      const payload = {
-        items: cart.map(item => ({
-          productId: item.product.id,
-          quantity: item.quantity
-        })),
-        customer: {
-          name: formData.name.trim(),
-          phone: formData.phone.trim(),
-          address: formData.address.trim(),
-          city: formData.city.trim(),
-          state: formData.state.trim(),
-          pincode: formData.pincode.trim()
-        },
-        paymentMethod,
-        couponCode: appliedCoupon ? appliedCoupon.code : null
-      };
+    const payload = {
+      items: cart.map(item => ({
+        productId: item.product.id,
+        quantity: item.quantity
+      })),
+      customer: {
+        name: formData.name.trim(),
+        phone: formData.phone.trim(),
+        address: formData.address.trim(),
+        city: formData.city.trim(),
+        state: formData.state.trim(),
+        pincode: formData.pincode.trim()
+      },
+      paymentMethod,
+      couponCode: appliedCoupon ? appliedCoupon.code : null
+    };
 
-      const orderResult = await api.createOrder(payload);
-      setConfirmedOrder(orderResult);
-      clearCart();
-      showToast('Order confirmed! 🌿 Thank you!');
-    } catch (err) {
-      showToast(err.message || 'Error creating order. Please try again.');
-    } finally {
-      setSubmitting(false);
+    if (paymentMethod === 'RAZORPAY') {
+      await handleRazorpayPayment(payload);
+    } else {
+      try {
+        const orderResult = await api.createOrder(payload);
+        setConfirmedOrder(orderResult);
+        clearCart();
+        showToast('Order confirmed! 🌿 Thank you!');
+      } catch (err) {
+        showToast(err.message || 'Error creating order. Please try again.');
+      } finally {
+        setSubmitting(false);
+      }
     }
   };
 
@@ -174,6 +265,16 @@ export const CheckoutModal = () => {
                 </label>
                 <div className="payment-method-selector">
                   <div
+                    className={`payment-method-card ${paymentMethod === 'RAZORPAY' ? 'active' : ''}`}
+                    onClick={() => setPaymentMethod('RAZORPAY')}
+                  >
+                    <span>💳</span>
+                    <div>
+                      <div>Razorpay Online</div>
+                      <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>UPI, Cards, Netbanking, Wallets</div>
+                    </div>
+                  </div>
+                  <div
                     className={`payment-method-card ${paymentMethod === 'COD' ? 'active' : ''}`}
                     onClick={() => setPaymentMethod('COD')}
                   >
@@ -181,16 +282,6 @@ export const CheckoutModal = () => {
                     <div>
                       <div>Cash on Delivery</div>
                       <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Pay cash/UPI at doorstep</div>
-                    </div>
-                  </div>
-                  <div
-                    className={`payment-method-card ${paymentMethod === 'UPI' ? 'active' : ''}`}
-                    onClick={() => setPaymentMethod('UPI')}
-                  >
-                    <span>📱</span>
-                    <div>
-                      <div>UPI / Google Pay</div>
-                      <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Instant zero-fee transfer</div>
                     </div>
                   </div>
                 </div>

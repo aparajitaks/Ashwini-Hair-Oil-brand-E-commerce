@@ -10,6 +10,7 @@ import productRoutes from './routes/productRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
 import couponRoutes from './routes/couponRoutes.js';
 import seedRoutes from './routes/seedRoutes.js';
+import paymentRoutes from './routes/paymentRoutes.js';
 
 dotenv.config();
 
@@ -32,6 +33,7 @@ app.use('/products', express.static(productsDir));
 app.use('/api', productRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/coupons', couponRoutes);
+app.use('/api/payment', paymentRoutes);
 app.use('/api', seedRoutes);
 
 // Health check endpoint

@@ -73,6 +73,39 @@ export const api = {
       throw new Error(data.message || 'Failed to place order');
     }
     return data.data;
+  },
+
+  // Razorpay Payments
+  async getPaymentConfig() {
+    const res = await fetch(`${API_BASE}/payment/config`);
+    if (!res.ok) throw new Error('Failed to fetch payment config');
+    return res.json();
+  },
+
+  async createRazorpayOrder(amount, receipt, notes = {}) {
+    const res = await fetch(`${API_BASE}/payment/create-order`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ amount, receipt, notes })
+    });
+    const data = await res.json();
+    if (!res.ok || !data.success) {
+      throw new Error(data.error || 'Failed to initiate Razorpay order');
+    }
+    return data;
+  },
+
+  async verifyRazorpayPayment(verificationPayload) {
+    const res = await fetch(`${API_BASE}/payment/verify`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(verificationPayload)
+    });
+    const data = await res.json();
+    if (!res.ok || !data.success) {
+      throw new Error(data.error || 'Payment verification failed');
+    }
+    return data;
   }
 };
 
