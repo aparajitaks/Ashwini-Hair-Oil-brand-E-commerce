@@ -554,12 +554,11 @@ export const PRODUCTS_DATA = [
 ];
 
 export const CATEGORIES_DATA = [
-  { id: "all", name: "All Products", icon: "✨" },
-  { id: "soaps", name: "Handmade Soaps", icon: "🧼" },
-  { id: "skincare", name: "Face & Skin Care", icon: "🌿" },
-  { id: "haircare", name: "Hair Care Solutions", icon: "💆‍♀️" },
-  { id: "babycare", name: "Baby Care Range", icon: "👶" },
-  { id: "combos", name: "Value Combos & Offers", icon: "🎁" }
+  { id: "all", name: "Shop All", icon: "✨" },
+  { id: "haircare", name: "Hair Care", icon: "💆‍♀️" },
+  { id: "skincare", name: "Skin Care", icon: "🌿" },
+  { id: "babycare", name: "Baby Care", icon: "👶" },
+  { id: "combos", name: "Combo", icon: "🎁" }
 ];
 
 export const CONCERNS_DATA = [

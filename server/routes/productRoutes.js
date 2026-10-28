@@ -20,7 +20,11 @@ router.get('/products', async (req, res) => {
       const filter = {};
 
       if (category && category !== 'all') {
-        filter.category = category;
+        if (category === 'skincare') {
+          filter.$or = [{ category: 'skincare' }, { category: 'soaps' }];
+        } else {
+          filter.category = category;
+        }
       }
 
       if (concern && concern !== 'all') {
@@ -52,7 +56,11 @@ router.get('/products', async (req, res) => {
     let list = [...PRODUCTS_DATA];
 
     if (category && category !== 'all') {
-      list = list.filter(p => p.category === category);
+      if (category === 'skincare') {
+        list = list.filter(p => p.category === 'skincare' || p.category === 'soaps');
+      } else {
+        list = list.filter(p => p.category === category);
+      }
     }
 
     if (concern && concern !== 'all') {

@@ -93,8 +93,8 @@
             <span>Explore All Products</span>
             <span>→</span>
           </a>
-          <a href="#offersBanner" class="btn-secondary">
-            <span>View 3-Pack Combos (₹449)</span>
+          <a href="#catalog" class="btn-secondary" id="heroCombosBtn">
+            <span>View Combos</span>
           </a>
         </div>
 
@@ -172,30 +172,6 @@
     </div>
   </section>
 
-  <!-- Offers Callout Banner (Pack of 3 Special) -->
-  <section class="offers-callout" id="offersBanner">
-    <div class="container">
-      <div class="offer-banner-card">
-        <div class="offer-content">
-          <h3>🔥 Signature Pack of 3 Soap Offer at Just ₹449!</h3>
-          <p>
-            Choose from Activated Bamboo Charcoal, Coffee Tan Removal, or Baby Glowing Almond Soaps. Handmade with cold-pressed oils. Free express delivery anywhere in India.
-          </p>
-          <div class="offer-pills">
-            <span class="offer-pill">Activated Charcoal (₹449)</span>
-            <span class="offer-pill">Coffee Glow (₹449)</span>
-            <span class="offer-pill">Gentle Baby Soap (₹449)</span>
-            <span class="offer-pill">100% Free Shipping</span>
-          </div>
-        </div>
-        <button class="offer-btn" id="viewPackOf3Btn">
-          <span>Shop Pack of 3 Deals</span>
-          <span>→</span>
-        </button>
-      </div>
-    </div>
-  </section>
-
   <!-- Main Catalog Section -->
   <section class="catalog-section" id="catalog">
     <div class="container">
@@ -203,26 +179,21 @@
         <span class="section-tag">Authentic Herbal Catalog</span>
         <h3 class="section-title">Explore Our Ayurvedic Creations</h3>
         <p class="section-subtitle">
-          Pure formulations designed for your skin and hair concerns. Select a category or concern to filter.
+          Pure formulations designed for your skin and hair wellness. Select a category or search below.
         </p>
       </div>
 
       <!-- Category Filter Tabs -->
       <div class="category-tabs-wrapper">
         <div class="category-tabs" id="categoryTabs">
-          <!-- Dynamically generated or static tabs -->
+          <!-- Dynamically generated tabs matching navbar -->
         </div>
       </div>
 
-      <!-- Filter Sub-bar (Concerns, Live Search, Sort) -->
-      <div class="filter-sub-bar">
-        <div class="concern-filters" id="concernFilters">
-          <span class="concern-label">Target Concern:</span>
-          <!-- Concern chips injected via app.js -->
-        </div>
-
-        <div class="filter-controls-right">
-          <div class="search-input-wrapper">
+      <!-- Filter Sub-bar (Search & Sort) -->
+      <div class="filter-sub-bar" style="justify-content: flex-end;">
+        <div class="filter-controls-right" style="width: 100%; justify-content: space-between;">
+          <div class="search-input-wrapper" style="flex-grow: 1; max-width: 400px;">
             <span class="search-icon-inside">🔍</span>
             <input type="text" id="catalogSearchInput" class="search-input" placeholder="Search aloe, saffron, hair..." autocomplete="off">
           </div>

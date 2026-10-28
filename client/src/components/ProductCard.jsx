@@ -2,10 +2,11 @@ import React from 'react';
 import { useCart } from '../context/CartContext';
 
 export const ProductCard = ({ product }) => {
-  const { cart, addToCart, openQuickView } = useCart();
+  const { cart, addToCart, updateQuantity, openQuickView } = useCart();
 
   const discountPercent = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
-  const inCart = cart.some(item => item.product.id === product.id);
+  const cartItem = cart.find(item => item.product.id === product.id);
+  const quantity = cartItem ? cartItem.quantity : 0;
 
   return (
     <article className="product-card" data-id={product.id}>
@@ -48,12 +49,32 @@ export const ProductCard = ({ product }) => {
             <span className="card-mrp">₹{product.originalPrice}</span>
           </div>
 
-          <button
-            className={`btn-add-cart ${inCart ? 'added' : ''}`}
-            onClick={() => addToCart(product, 1)}
-          >
-            <span>{inCart ? '✓ Added' : '+ Add'}</span>
-          </button>
+          {quantity === 0 ? (
+            <button
+              className="btn-add-cart"
+              onClick={() => addToCart(product, 1)}
+            >
+              <span>+ Add</span>
+            </button>
+          ) : (
+            <div className="card-qty-stepper">
+              <button
+                className="card-qty-btn"
+                onClick={() => updateQuantity(product.id, -1)}
+                aria-label="Decrease quantity"
+              >
+                −
+              </button>
+              <span className="card-qty-count">{quantity}</span>
+              <button
+                className="card-qty-btn"
+                onClick={() => updateQuantity(product.id, 1)}
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </article>

@@ -1096,6 +1096,46 @@ img {
   background: var(--success);
 }
 
+.card-qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  background: var(--primary-deep);
+  border: 1px solid var(--primary-deep);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(14, 41, 29, 0.2);
+  height: 38px;
+}
+
+.card-qty-btn {
+  width: 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: background var(--trans-fast);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  line-height: 1;
+}
+
+.card-qty-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.card-qty-count {
+  min-width: 28px;
+  text-align: center;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #ffde8a;
+  padding: 0 4px;
+}
+
 /* Empty State */
 .empty-catalog {
   grid-column: 1 / -1;

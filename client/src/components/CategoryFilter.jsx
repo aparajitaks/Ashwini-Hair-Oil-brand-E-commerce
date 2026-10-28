@@ -2,11 +2,8 @@ import React from 'react';
 
 export const CategoryFilter = ({
   categories,
-  concerns,
   activeCategory,
   onSelectCategory,
-  activeConcern,
-  onSelectConcern,
   searchTerm,
   onSearchChange,
   sortBy,
@@ -15,7 +12,7 @@ export const CategoryFilter = ({
 }) => {
   return (
     <div className="filter-wrapper">
-      {/* Category Tabs */}
+      {/* Category Tabs: Exactly matching the navbar links */}
       <div className="category-tabs-wrapper">
         <div className="category-tabs" id="categoryTabs">
           {categories.map(cat => (
@@ -31,29 +28,16 @@ export const CategoryFilter = ({
         </div>
       </div>
 
-      {/* Filter Sub-bar */}
-      <div className="filter-sub-bar">
-        <div className="concern-filters">
-          <span className="concern-label">Target Concern:</span>
-          {concerns.map(con => (
-            <button
-              key={con.id}
-              className={`concern-chip ${con.id === activeConcern ? 'active' : ''}`}
-              onClick={() => onSelectConcern(con.id)}
-            >
-              {con.name}
-            </button>
-          ))}
-        </div>
-
-        <div className="filter-controls-right">
-          <div className="search-input-wrapper">
+      {/* Filter Controls: Search & Sort only (Target Concern removed) */}
+      <div className="filter-sub-bar" style={{ justifyContent: 'flex-end' }}>
+        <div className="filter-controls-right" style={{ width: '100%', justifyContent: 'space-between' }}>
+          <div className="search-input-wrapper" style={{ flexGrow: 1, maxWidth: '400px' }}>
             <span className="search-icon-inside">🔍</span>
             <input
               ref={searchInputRef}
               type="text"
               className="search-input"
-              placeholder="Search herbs, aloevera, hair..."
+              placeholder="Search herbs, aloevera, hair, saffron..."
               value={searchTerm}
               onChange={(e) => onSearchChange(e.target.value)}
               autoComplete="off"
@@ -77,4 +61,3 @@ export const CategoryFilter = ({
     </div>
   );
 };
-

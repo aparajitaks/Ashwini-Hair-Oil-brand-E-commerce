@@ -3,7 +3,6 @@ import { api } from './api/client';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { TrustBar } from './components/TrustBar';
-import { OffersBanner } from './components/OffersBanner';
 import { CategoryFilter } from './components/CategoryFilter';
 import { ProductGrid } from './components/ProductGrid';
 import { ProductModal } from './components/ProductModal';
@@ -22,26 +21,16 @@ export const App = () => {
   const [products, setProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
   const [categories, setCategories] = useState([
-    { id: "all", name: "All Products", icon: "✨" },
-    { id: "soaps", name: "Handmade Soaps", icon: "🧼" },
-    { id: "skincare", name: "Face & Skin Care", icon: "🌿" },
-    { id: "haircare", name: "Hair Care Solutions", icon: "💆‍♀️" },
-    { id: "babycare", name: "Baby Care Range", icon: "👶" },
-    { id: "combos", name: "Value Combos & Offers", icon: "🎁" }
-  ]);
-  const [concerns, setConcerns] = useState([
-    { id: "all", name: "All Concerns" },
-    { id: "pigmentation", name: "Pigmentation & Dark Spots" },
-    { id: "acne", name: "Acne & Oily Skin" },
-    { id: "glowing", name: "Dull Skin & Radiance" },
-    { id: "hairfall", name: "Hair Fall & Dandruff" },
-    { id: "baby-gentle", name: "Gentle Baby Care" }
+    { id: "all", name: "Shop All", icon: "✨" },
+    { id: "haircare", name: "Hair Care", icon: "💆‍♀️" },
+    { id: "skincare", name: "Skin Care", icon: "🌿" },
+    { id: "babycare", name: "Baby Care", icon: "👶" },
+    { id: "combos", name: "Combo", icon: "🎁" }
   ]);
   const [testimonials, setTestimonials] = useState([]);
   const [faqs, setFaqs] = useState([]);
 
   const [activeCategory, setActiveCategory] = useState('all');
-  const [activeConcern, setActiveConcern] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('featured');
   const [loading, setLoading] = useState(true);
@@ -52,15 +41,13 @@ export const App = () => {
   useEffect(() => {
     const loadMetadata = async () => {
       try {
-        const [catsRes, concsRes, testsRes, faqsRes] = await Promise.allSettled([
+        const [catsRes, testsRes, faqsRes] = await Promise.allSettled([
           api.getCategories(),
-          api.getConcerns(),
           api.getTestimonials(),
           api.getFaqs()
         ]);
 
         if (catsRes.status === 'fulfilled' && catsRes.value?.data) setCategories(catsRes.value.data);
-        if (concsRes.status === 'fulfilled' && concsRes.value?.data) setConcerns(concsRes.value.data);
         if (testsRes.status === 'fulfilled' && testsRes.value?.data) setTestimonials(testsRes.value.data);
         if (faqsRes.status === 'fulfilled' && faqsRes.value?.data) setFaqs(faqsRes.value.data);
       } catch (err) {
@@ -71,7 +58,7 @@ export const App = () => {
     loadMetadata();
   }, []);
 
-  // Fetch products whenever filters or sort change
+  // Fetch products whenever category, search, or sort change
   useEffect(() => {
     let isMounted = true;
     const fetchFiltered = async () => {
@@ -79,7 +66,6 @@ export const App = () => {
       try {
         const res = await api.getProducts({
           category: activeCategory,
-          concern: activeConcern,
           q: searchTerm,
           sort: sortBy
         });
@@ -87,7 +73,7 @@ export const App = () => {
         if (isMounted && res.data) {
           setProducts(res.data);
           // Save full list if unfiltered
-          if (activeCategory === 'all' && activeConcern === 'all' && !searchTerm) {
+          if (activeCategory === 'all' && !searchTerm) {
             setAllProducts(res.data);
           }
         }
@@ -107,7 +93,7 @@ export const App = () => {
       isMounted = false;
       clearTimeout(timer);
     };
-  }, [activeCategory, activeConcern, searchTerm, sortBy]);
+  }, [activeCategory, searchTerm, sortBy]);
 
   // Keyboard shortcut '/' for search
   useEffect(() => {
@@ -125,7 +111,6 @@ export const App = () => {
 
   const handleResetFilters = () => {
     setActiveCategory('all');
-    setActiveConcern('all');
     setSearchTerm('');
     setSortBy('featured');
   };
@@ -144,11 +129,6 @@ export const App = () => {
     scrollToCatalog();
   };
 
-  const handleShopPackOf3 = () => {
-    setActiveCategory('soaps');
-    scrollToCatalog();
-  };
-
   return (
     <div className="app-root">
       <Navbar
@@ -164,8 +144,6 @@ export const App = () => {
 
       <TrustBar />
 
-      <OffersBanner onShopPackOf3={handleShopPackOf3} />
-
       {/* Main Catalog */}
       <section className="catalog-section" id="catalog">
         <div className="container">
@@ -173,17 +151,14 @@ export const App = () => {
             <span className="section-tag">Authentic Herbal Catalog (MERN)</span>
             <h3 className="section-title">Explore Our Ayurvedic Creations</h3>
             <p className="section-subtitle">
-              Pure formulations designed for your skin and hair concerns. Select a category or concern to filter.
+              Pure formulations designed for your skin and hair wellness. Select a category or search below.
             </p>
           </div>
 
           <CategoryFilter
             categories={categories}
-            concerns={concerns}
             activeCategory={activeCategory}
             onSelectCategory={setActiveCategory}
-            activeConcern={activeConcern}
-            onSelectConcern={setActiveConcern}
             searchTerm={searchTerm}
             onSearchChange={setSearchTerm}
             sortBy={sortBy}
@@ -219,4 +194,3 @@ export const App = () => {
     </div>
   );
 };
-

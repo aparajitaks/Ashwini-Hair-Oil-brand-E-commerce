@@ -67,7 +67,6 @@ const mobileCartOpenBtn = document.getElementById('mobileCartOpenBtn');
 
 function init() {
   renderCategoryTabs();
-  renderConcernFilters();
   renderProductGrid();
   renderTestimonials();
   renderFaqs();
@@ -104,12 +103,11 @@ function getFilteredProducts() {
 
   // Category Filter
   if (state.activeCategory !== 'all') {
-    list = list.filter(p => p.category === state.activeCategory);
-  }
-
-  // Concern Filter
-  if (state.activeConcern !== 'all') {
-    list = list.filter(p => p.concerns && p.concerns.includes(state.activeConcern));
+    if (state.activeCategory === 'skincare') {
+      list = list.filter(p => p.category === 'skincare' || p.category === 'soaps');
+    } else {
+      list = list.filter(p => p.category === state.activeCategory);
+    }
   }
 
   // Search Filter
@@ -166,11 +164,9 @@ function renderProductGrid() {
     if (resetBtn) {
       resetBtn.addEventListener('click', () => {
         state.activeCategory = 'all';
-        state.activeConcern = 'all';
         state.searchTerm = '';
         if (catalogSearchInput) catalogSearchInput.value = '';
         renderCategoryTabs();
-        renderConcernFilters();
         renderProductGrid();
       });
     }
@@ -179,7 +175,8 @@ function renderProductGrid() {
 
   productGrid.innerHTML = products.map(product => {
     const discountPercent = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
-    const inCart = state.cart.some(item => item.id === product.id);
+    const cartItem = state.cart.find(item => item.id === product.id);
+    const quantity = cartItem ? cartItem.quantity : 0;
 
     return `
       <article class="product-card" data-id="${product.id}">
@@ -214,9 +211,17 @@ function renderProductGrid() {
               <span class="card-mrp">₹${product.originalPrice}</span>
             </div>
 
-            <button class="btn-add-cart ${inCart ? 'added' : ''}" onclick="window.app.addToCart('${product.id}', 1, this)">
-              <span>${inCart ? '✓ Added' : '+ Add'}</span>
-            </button>
+            ${quantity === 0 ? `
+              <button class="btn-add-cart" onclick="window.app.addToCart('${product.id}', 1, this)">
+                <span>+ Add</span>
+              </button>
+            ` : `
+              <div class="card-qty-stepper">
+                <button class="card-qty-btn" onclick="window.app.updateCartQuantity('${product.id}', -1)" aria-label="Decrease quantity">−</button>
+                <span class="card-qty-count">${quantity}</span>
+                <button class="card-qty-btn" onclick="window.app.updateCartQuantity('${product.id}', 1)" aria-label="Increase quantity">+</button>
+              </div>
+            `}
           </div>
         </div>
       </article>
@@ -274,17 +279,10 @@ function addToCart(productId, quantity = 1, buttonEl = null) {
 
   saveCart();
   updateCartUI();
+  renderProductGrid();
 
   const product = PRODUCTS.find(p => p.id === productId);
   showToast(`Added ${product ? product.name : 'item'} to Basket 🌿`);
-
-  if (buttonEl) {
-    buttonEl.classList.add('added');
-    buttonEl.innerHTML = '<span>✓ Added</span>';
-    setTimeout(() => {
-      // Keep it synced with cart
-    }, 1200);
-  }
 }
 
 function updateCartQuantity(productId, delta) {

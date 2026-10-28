@@ -52,7 +52,7 @@ export const Hero = ({ onExploreClick, onCombosClick }) => {
               <span>→</span>
             </button>
             <button className="btn-secondary" onClick={onCombosClick}>
-              <span>View 3-Pack Combos (₹449)</span>
+              <span>View Combos</span>
             </button>
           </div>
 
