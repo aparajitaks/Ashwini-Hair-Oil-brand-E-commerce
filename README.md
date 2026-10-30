@@ -191,3 +191,4 @@ curl -X POST http://localhost:5001/api/seed
 |------|----------|-----------|
 | `AYURVEDA10` | 10% off entire cart | No minimum |
 | `ASHWINI50` | ₹50 flat off | ₹300+ |
+# Ashwini-Hair-Oil-brand-E-commerce
