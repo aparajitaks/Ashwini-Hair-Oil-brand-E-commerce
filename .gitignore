@@ -4,6 +4,10 @@ npm-debug.log*
 
 # Environment files
 .env
+.env.*
+**/.env
+**/.env.*
+server/.env
 
 # OS files
 .DS_Store
