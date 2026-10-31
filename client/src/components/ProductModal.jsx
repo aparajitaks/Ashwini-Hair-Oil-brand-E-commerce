@@ -56,7 +56,7 @@ export const ProductModal = () => {
 
             <p className="modal-desc">{quickViewProduct.description}</p>
 
-            <div className="modal-ingredients-heading">🌿 Key Ayurvedic Actives:</div>
+            <div className="modal-ingredients-heading">Key Ayurvedic Actives:</div>
             <div className="modal-ingredients-list">
               {quickViewProduct.keyIngredients?.map((ing, i) => (
                 <div key={i} className="ingredient-pill">
@@ -65,7 +65,7 @@ export const ProductModal = () => {
               ))}
             </div>
 
-            <div className="modal-ingredients-heading" style={{ marginTop: '10px' }}>✨ Proven Benefits:</div>
+            <div className="modal-ingredients-heading" style={{ marginTop: '10px' }}>Proven Benefits:</div>
             <ul style={{ listStyle: 'none', fontSize: '0.84rem', color: 'var(--text-muted)', marginBottom: '16px' }}>
               {quickViewProduct.benefits?.map((b, i) => (
                 <li key={i} style={{ marginBottom: '4px' }}>✓ {b}</li>

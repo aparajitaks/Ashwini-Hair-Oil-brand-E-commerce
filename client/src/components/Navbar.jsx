@@ -111,7 +111,7 @@ export const Navbar = ({ activeCategory, onSelectCategory, onFocusSearch }) => {
         {mobileMenuOpen && (
           <div style={{ background: 'var(--bg-card)', padding: '16px 24px', borderBottom: '1px solid var(--border-light)' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', paddingBottom: '10px', borderBottom: '1px solid var(--border-subtle)' }}>
-              <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)' }}>🌐 Language / ಭಾಷೆ:</span>
+              <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)' }}>Language / ಭಾಷೆ:</span>
               <div className="language-selector">
                 <button
                   type="button"

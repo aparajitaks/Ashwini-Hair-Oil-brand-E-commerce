@@ -72,7 +72,7 @@ router.post('/', async (req, res) => {
     const orderId = 'ASH-' + Math.floor(100000 + Math.random() * 900000);
 
     // Build WhatsApp message URL
-    let waMsg = `*🌿 NEW ORDER #${orderId} - ASHWINI HERBAL*\n`;
+    let waMsg = `*NEW ORDER #${orderId} - ASHWINI HERBAL*\n`;
     waMsg += `---------------------------------\n`;
     verifiedItems.forEach((it, i) => {
       waMsg += `${i + 1}. *${it.name}* (${it.netQuantity})\n   Qty: ${it.quantity} x ₹${it.price} = ₹${it.quantity * it.price}\n`;
@@ -87,7 +87,7 @@ router.post('/', async (req, res) => {
     waMsg += `*Phone:* ${customer.phone}\n`;
     waMsg += `*Address:* ${customer.address}, ${customer.city || ''}, ${customer.state || ''} - ${customer.pincode || ''}\n`;
     waMsg += `*Payment:* ${paymentMethod || 'COD'}\n`;
-    waMsg += `\nPlease confirm dispatch! 🙏`;
+    waMsg += `\nPlease confirm dispatch!`;
 
     const whatsAppUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waMsg)}`;
 

@@ -6,7 +6,7 @@ export const OffersBanner = ({ onShopPackOf3 }) => {
       <div className="container">
         <div className="offer-banner-card">
           <div className="offer-content">
-            <h3>🔥 Signature Pack of 3 Soap Offer at Just ₹449!</h3>
+            <h3>Signature Pack of 3 Soap Offer at Just ₹449!</h3>
             <p>
               Choose from Activated Bamboo Charcoal, Coffee Tan Removal, or Baby Glowing Almond Soaps. Handmade with cold-pressed oils. Free express delivery anywhere in India.
             </p>

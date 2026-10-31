@@ -23,7 +23,7 @@ export const ProductCard = ({ product }) => {
               openQuickView(product);
             }}
           >
-            <span>👁️</span> Quick View
+            Quick View
           </button>
         </div>
       </div>

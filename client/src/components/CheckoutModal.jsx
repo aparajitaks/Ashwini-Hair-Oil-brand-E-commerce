@@ -38,7 +38,7 @@ export const CheckoutModal = () => {
     try {
       const config = await api.getPaymentConfig();
       if (!config.isConfigured || !config.keyId) {
-        showToast('⚠️ Razorpay credentials pending in server/.env. Falling back to COD/WhatsApp order.');
+        showToast('Online payment not configured. Placing order with Cash on Delivery.');
         const orderResult = await api.createOrder({ ...orderPayload, paymentMethod: 'COD' });
         setConfirmedOrder(orderResult);
         clearCart();
@@ -93,7 +93,7 @@ export const CheckoutModal = () => {
             });
 
             clearCart();
-            showToast('Payment successful! 🌿 Order confirmed!');
+            showToast('Payment successful! Order confirmed!');
           } catch (verifyErr) {
             showToast(verifyErr.message || 'Payment verification failed');
           } finally {
@@ -150,7 +150,7 @@ export const CheckoutModal = () => {
         const orderResult = await api.createOrder(payload);
         setConfirmedOrder(orderResult);
         clearCart();
-        showToast('Order confirmed! 🌿 Thank you!');
+        showToast('Order confirmed! Thank you!');
       } catch (err) {
         showToast(err.message || 'Error creating order. Please try again.');
       } finally {
@@ -270,7 +270,12 @@ export const CheckoutModal = () => {
                     className={`payment-method-card ${paymentMethod === 'RAZORPAY' ? 'active' : ''}`}
                     onClick={() => setPaymentMethod('RAZORPAY')}
                   >
-                    <span>💳</span>
+                    <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                        <line x1="2" x2="22" y1="10" y2="10"></line>
+                      </svg>
+                    </span>
                     <div>
                       <div>{t('razorpayOnline')}</div>
                       <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{t('razorpaySub')}</div>
@@ -280,7 +285,13 @@ export const CheckoutModal = () => {
                     className={`payment-method-card ${paymentMethod === 'COD' ? 'active' : ''}`}
                     onClick={() => setPaymentMethod('COD')}
                   >
-                    <span>💵</span>
+                    <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect width="20" height="12" x="2" y="6" rx="2"></rect>
+                        <circle cx="12" cy="12" r="2"></circle>
+                        <path d="M6 12h.01M18 12h.01"></path>
+                      </svg>
+                    </span>
                     <div>
                       <div>{t('cod')}</div>
                       <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{t('codSub')}</div>

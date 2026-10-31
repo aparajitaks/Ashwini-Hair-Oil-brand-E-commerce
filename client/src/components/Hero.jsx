@@ -11,16 +11,16 @@ export const Hero = ({ onExploreClick, onSelectCategory }) => {
   const slides = [
     {
       id: "rosemary-black-hair-oil",
-      eyebrow: "🌿 CUSTOMIZED AYURVEDIC HAIR CARE",
+      eyebrow: "CUSTOMIZED AYURVEDIC HAIR CARE",
       title: "Root Cause Hair Fall Solution",
       titleHighlight: "Powered by 22 Herbs",
       subtitle: "Handcrafted with pure Rosemary, Bhringraj (King of Hair), and cold-pressed seed oils to halt excessive shedding, clear dandruff, and nourish dormant roots.",
       categoryTarget: "haircare",
       ctaText: "Explore Hair Care",
       features: [
-        { icon: "🌿", text: "22 Herbal Ingredients" },
-        { icon: "🧪", text: "Paraben & Sulphate Free" },
-        { icon: "💆‍♀️", text: "Stimulates New Growth" }
+        { text: "22 Herbal Ingredients" },
+        { text: "Paraben & Sulphate Free" },
+        { text: "Stimulates New Growth" }
       ],
       product: {
         id: "rosemary-black-hair-oil",
@@ -52,16 +52,16 @@ export const Hero = ({ onExploreClick, onSelectCategory }) => {
     },
     {
       id: "kumkumadi-thailam",
-      eyebrow: "✨ SACRED AYURVEDIC SKINCARE",
+      eyebrow: "SACRED AYURVEDIC SKINCARE",
       title: "Pure Kashmir Saffron & Sandalwood",
       titleHighlight: "Face Glowing Elixir",
       subtitle: "Authentic classical Kumkumadi Thailam infused with Goat Milk, Kashmiri Saffron, and pure Sandalwood to fade stubborn dark spots, melasma, and restore timeless golden glow.",
       categoryTarget: "skincare",
       ctaText: "Explore Skin Care",
       features: [
-        { icon: "✨", text: "100% Pure Kashmir Saffron" },
-        { icon: "🌸", text: "Fades Dark Spots & Tan" },
-        { icon: "💧", text: "Dermatologically Tested" }
+        { text: "100% Pure Kashmir Saffron" },
+        { text: "Fades Dark Spots & Tan" },
+        { text: "Dermatologically Tested" }
       ],
       product: {
         id: "kumkumadi-thailam",
@@ -93,16 +93,16 @@ export const Hero = ({ onExploreClick, onSelectCategory }) => {
     },
     {
       id: "charcoal-soap-pack-of-3",
-      eyebrow: "🧼 HANDCRAFTED BOTANICAL SOAPS",
+      eyebrow: "HANDCRAFTED BOTANICAL SOAPS",
       title: "Cold-Processed Bamboo Charcoal",
       titleHighlight: "Detox Pack of 3",
       subtitle: "Small-batch cold-processed bars with zero detergents and zero parabens. Deeply purifies pores, sloughs off dull dead skin cells, and balances oily skin with cold-pressed coconut oil.",
       categoryTarget: "combos",
       ctaText: "Explore Soap Combos",
       features: [
-        { icon: "🧼", text: "Small-Batch Handcrafted" },
-        { icon: "🍃", text: "Deep Pore Cleansing" },
-        { icon: "🚚", text: "Free Pan-India Delivery" }
+        { text: "Small-Batch Handcrafted" },
+        { text: "Deep Pore Cleansing" },
+        { text: "Free Pan-India Delivery" }
       ],
       product: {
         id: "charcoal-soap-pack-of-3",
@@ -167,7 +167,7 @@ export const Hero = ({ onExploreClick, onSelectCategory }) => {
         {/* Left Column: Text & Call to Action */}
         <div className="hero-content">
           <div className="hero-tag">
-            <span>✨</span> {activeSlide.eyebrow}
+            {activeSlide.eyebrow}
           </div>
 
           <h2 className="hero-title">
@@ -198,7 +198,11 @@ export const Hero = ({ onExploreClick, onSelectCategory }) => {
           <div className="hero-features">
             {activeSlide.features.map((feat, idx) => (
               <div key={idx} className="hero-feature-item">
-                <span className="hero-feature-icon">{feat.icon}</span>
+                <span className="hero-feature-icon" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
                 <span>{feat.text}</span>
               </div>
             ))}
@@ -214,7 +218,7 @@ export const Hero = ({ onExploreClick, onSelectCategory }) => {
             title="Click to view details"
           >
             <div className="hero-floating-badge">
-              <span>🏆</span> {activeSlide.product.badge}
+              {activeSlide.product.badge}
             </div>
 
             <div className="hero-image-wrapper">

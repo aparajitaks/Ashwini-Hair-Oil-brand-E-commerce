@@ -22,11 +22,11 @@ export const App = () => {
   const [products, setProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
   const displayedCategories = [
-    { id: "all", name: t('navAll'), icon: "✨" },
-    { id: "haircare", name: t('navHair'), icon: "💆‍♀️" },
-    { id: "skincare", name: t('navSkin'), icon: "🌿" },
-    { id: "babycare", name: t('navBaby'), icon: "👶" },
-    { id: "combos", name: t('navCombo'), icon: "🎁" }
+    { id: "all", name: t('navAll') },
+    { id: "haircare", name: t('navHair') },
+    { id: "skincare", name: t('navSkin') },
+    { id: "babycare", name: t('navBaby') },
+    { id: "combos", name: t('navCombo') }
   ];
   const [testimonials, setTestimonials] = useState([]);
   const [faqs, setFaqs] = useState([]);

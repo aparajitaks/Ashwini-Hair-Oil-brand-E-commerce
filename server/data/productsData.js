@@ -554,11 +554,11 @@ export const PRODUCTS_DATA = [
 ];
 
 export const CATEGORIES_DATA = [
-  { id: "all", name: "Shop All", icon: "✨" },
-  { id: "haircare", name: "Hair Care", icon: "💆‍♀️" },
-  { id: "skincare", name: "Skin Care", icon: "🌿" },
-  { id: "babycare", name: "Baby Care", icon: "👶" },
-  { id: "combos", name: "Combo", icon: "🎁" }
+  { id: "all", name: "Shop All" },
+  { id: "haircare", name: "Hair Care" },
+  { id: "skincare", name: "Skin Care" },
+  { id: "babycare", name: "Baby Care" },
+  { id: "combos", name: "Combo" }
 ];
 
 export const CONCERNS_DATA = [

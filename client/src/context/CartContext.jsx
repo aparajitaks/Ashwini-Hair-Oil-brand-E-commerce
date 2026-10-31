@@ -50,7 +50,7 @@ export const CartProvider = ({ children }) => {
       }
       return [...prev, { product, quantity }];
     });
-    showToast(`Added ${product.name} to basket 🌿`);
+    showToast(`Added ${product.name} to basket`);
   };
 
   const updateQuantity = (productId, delta) => {
@@ -116,7 +116,7 @@ export const CartProvider = ({ children }) => {
     try {
       const couponData = await api.applyCoupon(code.trim(), totals.subtotal);
       setAppliedCoupon(couponData);
-      showToast(`Coupon applied: ${couponData.desc} 🎉`);
+      showToast(`Coupon applied: ${couponData.desc}`);
     } catch (err) {
       showToast(err.message || 'Invalid coupon code');
     }
@@ -129,7 +129,7 @@ export const CartProvider = ({ children }) => {
 
   // WhatsApp Order Link generator
   const buildWhatsAppOrderUrl = (customer = null) => {
-    let msg = `*🌿 NEW ORDER - ASHWINI HERBAL*\n`;
+    let msg = `*NEW ORDER - ASHWINI HERBAL*\n`;
     msg += `---------------------------------\n`;
 
     cart.forEach(({ product, quantity }, idx) => {
@@ -155,7 +155,7 @@ export const CartProvider = ({ children }) => {
       msg += `(Please confirm my order and share delivery schedule)\n`;
     }
 
-    msg += `\nThank you! 🙏`;
+    msg += `\nThank you!`;
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
   };
 

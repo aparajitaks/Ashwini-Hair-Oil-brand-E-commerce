@@ -78,22 +78,18 @@ export const RoutineAdvisor = ({ allProducts }) => {
             <div className="quiz-step-content">
               <div className="quiz-options-grid">
                 <div className="quiz-option-btn" onClick={() => handleGoalSelect('pigmentation')}>
-                  <div className="quiz-option-icon">✨</div>
                   <div className="quiz-option-title">Fade Pigmentation & Tan</div>
                   <div className="quiz-option-desc">Clear dark spots, melasma, and sun damage</div>
                 </div>
                 <div className="quiz-option-btn" onClick={() => handleGoalSelect('acne')}>
-                  <div className="quiz-option-icon">🍃</div>
                   <div className="quiz-option-title">Control Acne & Oiliness</div>
                   <div className="quiz-option-desc">Purify pores with Neem, Charcoal & Tulsi</div>
                 </div>
                 <div className="quiz-option-btn" onClick={() => handleGoalSelect('hairfall')}>
-                  <div className="quiz-option-icon">💆‍♀️</div>
                   <div className="quiz-option-title">Stop Hair Fall & Dandruff</div>
                   <div className="quiz-option-desc">Boost growth with Rosemary & 22 Herbs</div>
                 </div>
                 <div className="quiz-option-btn" onClick={() => handleGoalSelect('babycare')}>
-                  <div className="quiz-option-icon">👶</div>
                   <div className="quiz-option-title">Gentle Baby Care</div>
                   <div className="quiz-option-desc">Tear-free almond massage & bath ritual</div>
                 </div>
@@ -106,17 +102,14 @@ export const RoutineAdvisor = ({ allProducts }) => {
             <div className="quiz-step-content">
               <div className="quiz-options-grid">
                 <div className="quiz-option-btn" onClick={() => handleTypeSelect('oily')}>
-                  <div className="quiz-option-icon">💧</div>
                   <div className="quiz-option-title">Oily / Combination</div>
                   <div className="quiz-option-desc">Greasy T-zone, prone to shine & breakouts</div>
                 </div>
                 <div className="quiz-option-btn" onClick={() => handleTypeSelect('dry')}>
-                  <div className="quiz-option-icon">🍂</div>
                   <div className="quiz-option-title">Dry / Dehydrated</div>
                   <div className="quiz-option-desc">Flaky, tight sensation after washing</div>
                 </div>
                 <div className="quiz-option-btn" onClick={() => handleTypeSelect('sensitive')}>
-                  <div className="quiz-option-icon">🌸</div>
                   <div className="quiz-option-title">Sensitive / Normal</div>
                   <div className="quiz-option-desc">Prone to redness or looking for pure maintenance</div>
                 </div>
@@ -139,7 +132,7 @@ export const RoutineAdvisor = ({ allProducts }) => {
               <div className="quiz-result-box">
                 <img src={recProduct.image} alt={recProduct.name} className="quiz-result-img" />
                 <div className="quiz-result-details">
-                  <h4>✨ Recommended Regimen: {recProduct.name}</h4>
+                  <h4>Recommended Regimen: {recProduct.name}</h4>
                   <p>{explanation}</p>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
                     <span style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--primary-deep)' }}>

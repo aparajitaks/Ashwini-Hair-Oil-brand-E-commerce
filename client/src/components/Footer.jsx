@@ -6,17 +6,11 @@ export const Footer = ({ onSelectCategory }) => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h3>🌿 Ashwini Herbal</h3>
-            <span>Pure Herbal • Pure You (MERN Stack)</span>
+            <h3>Ashwini Herbal</h3>
+            <span>Pure Herbal • Pure You</span>
             <p>
               Handcrafted Ayurvedic personal care products formulated with pure botanicals and sacred South Indian herbal wisdom. Delivered fresh to your home.
             </p>
-            <div style={{ display: 'flex', gap: '10px', fontSize: '1.2rem' }}>
-              <span>📸</span>
-              <span>💬</span>
-              <span>📘</span>
-              <span>✉️</span>
-            </div>
           </div>
 
           <div className="footer-col">
@@ -76,19 +70,19 @@ export const Footer = ({ onSelectCategory }) => {
 
           <div className="footer-col footer-contact">
             <h4>Order & Support</h4>
-            <p><span>📍</span> Ashwini Herbal Workshop, Bengaluru, Karnataka, India</p>
-            <p><span>📞</span> +91 98450 12345 (Mon - Sat, 9am - 7pm)</p>
-            <p><span>💬</span> WhatsApp Order Hotline: +91 98450 12345</p>
-            <p><span>✉️</span> care@ashwiniherbal.com</p>
+            <p>Ashwini Herbal Workshop, Bengaluru, Karnataka, India</p>
+            <p>+91 98450 12345 (Mon - Sat, 9am - 7pm)</p>
+            <p>WhatsApp Order Hotline: +91 98450 12345</p>
+            <p>care@ashwiniherbal.com</p>
             <div style={{ marginTop: '14px', fontSize: '0.8rem', color: '#a2b7ac' }}>
-              💳 Accepted: UPI • GPay • PhonePe • COD • Cards
+              Accepted: UPI • GPay • PhonePe • COD • Cards
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <div>© 2026 Ashwini Herbal. Powered by MongoDB, Express, React, and Node.js.</div>
-          <div>Made with 🌿 in India • Safe, Natural, Chemical-Free</div>
+          <div>© 2026 Ashwini Herbal. All rights reserved.</div>
+          <div>Handcrafted with care in India • Safe, Natural, Chemical-Free</div>
         </div>
       </div>
     </footer>

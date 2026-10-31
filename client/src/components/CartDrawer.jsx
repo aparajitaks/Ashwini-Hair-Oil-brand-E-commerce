@@ -41,7 +41,13 @@ export const CartDrawer = () => {
         {/* Header */}
         <div className="drawer-header">
           <h3>
-            <span>🛍️</span>
+            <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </span>
             <span>{t('cartTitle')} ({totals.totalItems})</span>
           </h3>
           <button className="drawer-close" onClick={closeCart} aria-label="Close Cart">
@@ -56,7 +62,7 @@ export const CartDrawer = () => {
               {totals.subtotal === 0
                 ? `Add ₹${threshold} for FREE Shipping`
                 : totals.isFreeShipping
-                  ? `🎉 You've unlocked 100% FREE Express Shipping!`
+                  ? `You've unlocked 100% FREE Express Shipping!`
                   : `Add ₹${remainingForFree} more for FREE Express Shipping`}
             </span>
             <span>{progressPercent}%</span>
@@ -70,7 +76,13 @@ export const CartDrawer = () => {
         <div className="drawer-body">
           {cart.length === 0 ? (
             <div className="empty-cart-view">
-              <div className="empty-cart-icon">🌿</div>
+              <div className="empty-cart-icon" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+              </div>
               <h4>Your basket is empty</h4>
               <p>Explore our handcrafted soaps and herbal hair oils to fill it up.</p>
               <button className="btn-primary" onClick={closeCart}>

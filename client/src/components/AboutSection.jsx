@@ -16,19 +16,19 @@ export const AboutSection = () => {
 
           <div className="about-pillars">
             <div className="pillar-item">
-              <h4>🌿 Wild-Harvested Herbs</h4>
+              <h4>Wild-Harvested Herbs</h4>
               <p>Manjistha, Neem, Amla, Bhringraj, and Kashmiri saffron sourced responsibly.</p>
             </div>
             <div className="pillar-item">
-              <h4>🧼 Cold-Pressed Seed Oils</h4>
+              <h4>Cold-Pressed Seed Oils</h4>
               <p>Virgin almond, castor, sesame and coconut oils that nourish skin mantles.</p>
             </div>
             <div className="pillar-item">
-              <h4>🧪 Tested for Efficacy</h4>
+              <h4>Tested for Efficacy</h4>
               <p>Gentle on delicate Indian skin types, proven for pigmentation and hair regrowth.</p>
             </div>
             <div className="pillar-item">
-              <h4>📦 Direct to Your Door</h4>
+              <h4>Direct to Your Door</h4>
               <p>Fresh from our herbal workshop with express courier tracking across India.</p>
             </div>
           </div>

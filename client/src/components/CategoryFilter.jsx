@@ -24,7 +24,7 @@ export const CategoryFilter = ({
               className={`cat-tab ${cat.id === activeCategory ? 'active' : ''}`}
               onClick={() => onSelectCategory(cat.id)}
             >
-              <span>{cat.icon}</span>
+              {cat.icon && <span>{cat.icon}</span>}
               <span>{cat.name}</span>
             </button>
           ))}
@@ -35,7 +35,12 @@ export const CategoryFilter = ({
       <div className="filter-sub-bar" style={{ justifyContent: 'flex-end' }}>
         <div className="filter-controls-right" style={{ width: '100%', justifyContent: 'space-between' }}>
           <div className="search-input-wrapper" style={{ flexGrow: 1, maxWidth: '400px' }}>
-            <span className="search-icon-inside">🔍</span>
+            <span className="search-icon-inside" style={{ display: 'inline-flex', alignItems: 'center' }}>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
             <input
               ref={searchInputRef}
               type="text"

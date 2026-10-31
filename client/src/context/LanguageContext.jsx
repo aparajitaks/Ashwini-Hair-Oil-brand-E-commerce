@@ -5,7 +5,7 @@ const LanguageContext = createContext();
 export const translations = {
   en: {
     // Top Bar & Branding
-    announcement: '🌿 Festive Herbal Offer: Use coupon AYURVEDA10 for 10% OFF | Free Express Shipping on Pack of 3 Deals & Orders over ₹499!',
+    announcement: 'Festive Herbal Offer: Use coupon AYURVEDA10 for 10% OFF | Free Express Shipping on Pack of 3 Deals & Orders over ₹499!',
     brandTag: 'Herbal • Pure You',
 
     // Navbar Categories
@@ -101,7 +101,7 @@ export const translations = {
 
   kn: {
     // Top Bar & Branding
-    announcement: '🌿 ಹಬ್ಬದ ಗಿಡಮೂಲಿಕೆ ಆಫರ್: 10% ರಿಯಾಯಿತಿಗಾಗಿ AYURVEDA10 ಕೂಪನ್ ಬಳಸಿ | ₹499 ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಆರ್ಡರ್‌ಗಳಿಗೆ ಉಚಿತ ವಿತರಣೆ!',
+    announcement: 'ಹಬ್ಬದ ಗಿಡಮೂಲಿಕೆ ಆಫರ್: 10% ರಿಯಾಯಿತಿಗಾಗಿ AYURVEDA10 ಕೂಪನ್ ಬಳಸಿ | ₹499 ಕ್ಕಿಂತ ಹೆಚ್ಚಿನ ಆರ್ಡರ್‌ಗಳಿಗೆ ಉಚಿತ ವಿತರಣೆ!',
     brandTag: 'ಗಿಡಮೂಲಿಕೆ • ಶುದ್ಧ ನೀವು',
 
     // Navbar Categories
