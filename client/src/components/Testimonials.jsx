@@ -44,7 +44,7 @@ const DEFAULT_WHATSAPP_REVIEWS = [
     category: "skincare",
     verified: true,
     product: "Overnight Renewal Night Cream & Hair Mask",
-    comment: "I am using your 2nd bottle of night cream now! Every night I wash my face with coffee soap and apply night cream. Next day I feel fresh with a golden glow on my face. I referred my friend Shwetha and she told me hair fall stopped instantly after just one use of your hair mask!"
+    comment: "I want to share feedback: now I am using your 2nd bottle of night cream which is almost over. Every night I wash my face with coffee soap and apply night cream — next day I feel fresh and have a glow on my face! I referred my friend Shwetha and just after one use of your hair mask, she says hair fall stopped instantly. Thank you!"
   },
   {
     name: "H R (Family Re-order)",
