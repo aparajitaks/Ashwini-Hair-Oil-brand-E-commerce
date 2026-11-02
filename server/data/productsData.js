@@ -468,7 +468,7 @@ export const PRODUCTS_DATA = [
     concerns: ["baby-gentle", "glowing"],
     price: 349,
     originalPrice: 499,
-    image: "/products/Ashwini Baby Glowing Massage Oil.png",
+    image: "/products/Ashwini Baby Glowing Massage Oil Real Packaging.jpg",
     rating: 4.9,
     reviewsCount: 310,
     badge: "Mother & Baby Choice",
@@ -649,7 +649,7 @@ export const PRODUCTS_DATA = [
     concerns: ["acne", "oily-skin"],
     price: 179,
     originalPrice: 249,
-    image: "/products/Ashwini Kuppameni with Neem Soap Bar.jpg",
+    image: "/products/Ashwini Kuppameni with Neem Soap Authentic Display.jpg",
     rating: 4.9,
     reviewsCount: 342,
     badge: "Pimple & Infection Clear • 100g",
@@ -670,6 +670,66 @@ export const PRODUCTS_DATA = [
     ],
     howToUse: "Wet skin with lukewarm water. Lather the Kuppameni Neem soap between wet hands or directly onto face and body. Gently massage the creamy herbal foam for 60 seconds to let the herbs work, then rinse cleanly.",
     features: ["Handmade with Care", "SLS & Paraben Free", "100% Pure Herbal", "Net Wt: 100g"],
+    inStock: true
+  },
+  {
+    id: "pigmentation-day-cream",
+    name: "Ashwini Herbal Pigmentation Day Cream",
+    subtitle: "Reduces Pigmentation, Evens Skin Tone & Brightens Naturally",
+    category: "skincare",
+    concerns: ["pigmentation", "glowing"],
+    price: 449,
+    originalPrice: 649,
+    image: "/products/Ashwini Pigmentation Day Cream 50g.jpg",
+    rating: 4.9,
+    reviewsCount: 195,
+    badge: "Official Day Care • 50g",
+    netQuantity: "50g Jar",
+    tagline: "For a Radiant & Even Glow • Herbal Protection Against Melasma & Sun Tan",
+    description: "An authentic classical Ayurvedic day moisturizer formulated to treat stubborn hyperpigmentation, melasma, dark patches, and sun damage. Infused with pure Licorice (Mulethi), White Sandalwood, and natural botanical brighteners that inhibit excess melanin production while delivering a matte, breathable glow suitable under makeup or sunscreen.",
+    keyIngredients: [
+      { name: "Licorice (Mulethi) Root", role: "Natural tyrosinase blocker that visibly fades dark pigmentation spots" },
+      { name: "White Sandalwood (Chandan)", role: "Cools dermal heat, soothes redness and balances uneven skin tone" },
+      { name: "Virgin Almond Oil & Aloe", role: "Lightweight daytime moisture barrier preventing moisture evaporation" }
+    ],
+    benefits: [
+      "Visibly fades stubborn dark spots, melasma patches and sun tan",
+      "Evens mottled, patchy skin tone into uniform radiant luminescence",
+      "Ultra-lightweight, non-greasy texture perfect for daytime humidity",
+      "Free from hydroquinone, bleach, parabens, and mineral oil"
+    ],
+    howToUse: "Wash face cleanly with Ashwini Manjistha Face Wash. Take a small amount and dot evenly across face and neck. Gently massage upward in small circular motions every morning.",
+    features: ["Reduces Pigmentation", "Evens Skin Tone", "Paraben Free", "Non-Greasy Day Formula"],
+    inStock: true
+  },
+  {
+    id: "day-glowing-cream",
+    name: "Ashwini Herbal Day Glowing Cream",
+    subtitle: "Chamomile & Aloe Vera Daytime Hydration for Healthy Skin All Day",
+    category: "skincare",
+    concerns: ["glowing", "anti-aging"],
+    price: 399,
+    originalPrice: 549,
+    image: "/products/Ashwini Day Glowing Cream 50g.jpg",
+    rating: 4.8,
+    reviewsCount: 162,
+    badge: "All-Day Radiance • 50g",
+    netQuantity: "50g Jar",
+    tagline: "Natural Glow • Healthy Skin All Day • Nature's Care for a Better You",
+    description: "Handcrafted everyday Ayurvedic glow cream made with pure German Chamomile, fresh Aloe Vera barbadensis juice, and botanical plant essences. Keeps the skin deeply supple, dewy, and energized against daily pollution, dry air, and screen stress without any heaviness or shine.",
+    keyIngredients: [
+      { name: "German Chamomile Flower", role: "Soothes skin fatigue and restores dewy natural glow" },
+      { name: "Fresh Aloe Vera Gel", role: "Provides continuous all-day moisture and skin plumping" },
+      { name: "Natural Plant Botanicals", role: "Creates a velvety smooth soft-focus dermal barrier" }
+    ],
+    benefits: [
+      "Awakens tired, dull and exhausted skin with instant hydration",
+      "Maintains youthful dewy complexion all day without oiliness",
+      "Gentle botanical formula suitable for everyday sensitive skin care",
+      "Fast-absorbing formula with subtle refreshing herbal scent"
+    ],
+    howToUse: "Apply generously to cleansed face and neck every morning. Smooth gently until absorbed for an instant petal-soft glow.",
+    features: ["Natural Glow", "Healthy Skin All Day", "Non-Comedogenic", "100% Herbal"],
     inStock: true
   }
 ];
