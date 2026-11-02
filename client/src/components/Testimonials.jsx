@@ -29,13 +29,49 @@ const DEFAULT_WHATSAPP_REVIEWS = [
     comment: "I have been using your products for 9 months and all have given 100% results! In this generation, it makes me very happy that you make genuine chemical-free products. My dandruff cleared in the very first wash with your hair oil! Manjistha soap reduced dark spots, gave face glow and reduced tanning. For pimples, I started Neem soap 8 days ago and already got 70% results, marks are fading away. Loving you from Udupi!"
   },
   {
-    name: "Verified Mother",
+    name: "Nagashree",
     city: "Karnataka",
     rating: 5,
     category: "babycare",
     verified: true,
     product: "Baby Massage Oil, Baby Soap & Manjistha Soap",
-    comment: "Ordered baby massage oil, baby soap and Manjistha soap for my baby. Day by day my baby's face changes and glow are visibly improving! And Manjistha soap gives a visible glow in just 1 face wash. Herbal hair oil also gave super results, totally satisfied with all your products!"
+    comment: "Ordered baby massage oil, baby soap and Manjistha soap for my baby. Day by day my baby's face glow is visibly improving! And Manjistha soap gives a visible glow in just 1 face wash. Herbal hair oil also gave super results, totally satisfied with all your products!"
+  },
+  {
+    name: "Nathalie",
+    city: "Verified Buyer",
+    rating: 5,
+    category: "skincare",
+    verified: true,
+    product: "Overnight Renewal Night Cream & Hair Mask",
+    comment: "I am using your 2nd bottle of night cream now! Every night I wash my face with coffee soap and apply night cream. Next day I feel fresh with a golden glow on my face. I referred my friend Shwetha and she told me hair fall stopped instantly after just one use of your hair mask!"
+  },
+  {
+    name: "H R (Family Re-order)",
+    city: "Karnataka",
+    rating: 5,
+    category: "haircare",
+    verified: true,
+    product: "Ashwini Herbal Shampoo (5 Liters Bulk Order)",
+    comment: "ನಮಸ್ಕಾರ್ರೀ ಮೇಡಮರೆ! Last month we bought your 250ml shampoo and all 8 members of our family loved it. Hair fall has reduced drastically and all our neighbors are asking where we got it from! Please send us a 5-liter can of shampoo for our family home use."
+  },
+  {
+    name: "Pallavi Prashanth",
+    city: "Karnataka",
+    rating: 5,
+    category: "haircare",
+    verified: true,
+    product: "Hair Growth Powder, Herbal Oil & Shampoo Kit",
+    comment: "Nan tagotini matte 4 months aytu shampoo, oil and growth powder use maadtidini. Olle result, hair fall full control agide (Using shampoo, oil and hair growth powder for 4 months now — hair fall is under 100% full control)! Ordering next batch!"
+  },
+  {
+    name: "Chaitra (Photo Review)",
+    city: "Karnataka",
+    rating: 5,
+    category: "skincare",
+    verified: true,
+    product: "Manjistha Soap & Kumkumadi Thailam",
+    comment: "Manjistha soap and Kumkumadi Thailam super 100% mam! Faded dark circles, cleared pimple marks and gives glowing smooth skin. Sent my photo review also!"
   },
   {
     name: "Sakshi Pandit",
