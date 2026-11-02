@@ -737,6 +737,46 @@ export const TESTIMONIALS_DATA = [
     comment: "Lip balm tumba channagide, olle result kottide mam! Nange tumba ishta aytu. Natural shine and completely heals dry and pigmented lips."
   },
   {
+    name: "Smitha MV",
+    city: "Karnataka",
+    rating: 5,
+    category: "skincare",
+    verified: true,
+    product: "Manjistha Soap & Pigmentation Day Cream",
+    source: "WhatsApp Chat",
+    comment: "Nanna mukada mele pigmentation and kappu mache tumba ittu. Used your Manjistha soap and Pigmentation Day Cream, tumba channagide! Faded dark spots visibly and gave good radiance. Suggested to my co-sister too and sent before/after photos!"
+  },
+  {
+    name: "Parijatha",
+    city: "Karnataka",
+    rating: 5,
+    category: "haircare",
+    verified: true,
+    product: "100% Natural Herbal Shampoos & Oils",
+    source: "WhatsApp Chat",
+    comment: "Nimdu items all natural! Edu use madak start madidmele bere yaav chemical base shampoo use enyavattu madbardu anside (After using your natural products, I feel I should never touch chemical shampoos ever again!). Keep growing, all the best!"
+  },
+  {
+    name: "Chethana",
+    city: "Karnataka",
+    rating: 5,
+    category: "haircare",
+    verified: true,
+    product: "Black Henna Powder & Bhringraj Hair Oil",
+    source: "WhatsApp Chat",
+    comment: "Black henna powder super, really good result! Covered white hair near ears into natural healthy black without any irritation. Re-ordering 250g Henna and Bhringraj hair oil!"
+  },
+  {
+    name: "Manjula M",
+    city: "Shivamogga, Karnataka",
+    rating: 5,
+    category: "babycare",
+    verified: true,
+    product: "Ayurvedic Baby Care Range",
+    source: "WhatsApp Chat",
+    comment: "Nim products yella good results ide without any side effects! Completely pure, gentle and safe for delicate baby skin. Re-ordering baby face cream and lotion again."
+  },
+  {
     name: "Kavitha",
     city: "Karnataka",
     rating: 5,
