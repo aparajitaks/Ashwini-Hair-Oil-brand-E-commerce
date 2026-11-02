@@ -42,7 +42,7 @@ export const PRODUCTS_DATA = [
     concerns: ["pigmentation", "acne", "oily-skin"],
     price: 349,
     originalPrice: 449,
-    image: "/products/Ashwini Manjista Herbal Face Wash Display.png",
+    image: "/products/Ashwini Manjista Face Wash Authentic Studio.jpg",
     rating: 4.8,
     reviewsCount: 248,
     badge: "Official Label ₹349",
@@ -73,7 +73,7 @@ export const PRODUCTS_DATA = [
     concerns: ["hairfall", "dandruff", "hair-growth"],
     price: 449,
     originalPrice: 649,
-    image: "/products/Gemini_Generated_Image_lg7ikqlg7ikqlg7i.png",
+    image: "/products/Ashwini Herbal Hair Oil 200ml Authentic Studio.jpg",
     rating: 4.9,
     reviewsCount: 520,
     badge: "Bestseller #1",
@@ -95,6 +95,66 @@ export const PRODUCTS_DATA = [
     ],
     howToUse: "Part hair into sections. Apply oil generously directly onto scalp using fingertips. Gently massage scalp in circular motions for 10 minutes to enhance blood flow. Leave on for at least 2 hours or overnight before washing with Ashwini Natural Herbs Shampoo.",
     features: ["22 Herbal Ingredients", "100% Pure & Organic Formula", "Mineral Oil Free", "For Men & Women"],
+    inStock: true
+  },
+  {
+    id: "ashwini-herbal-shampoo",
+    name: "Ashwini Herbal Shampoo (Amla, Aritha & Shikakai)",
+    subtitle: "Amla, Aritha & Shikakai Natural Botanical Cleanser",
+    category: "haircare",
+    concerns: ["hairfall", "dandruff"],
+    price: 349,
+    originalPrice: 449,
+    image: "/products/Ashwini Herbal Shampoo Amla Aritha Shikakai Authentic.jpg",
+    rating: 4.9,
+    reviewsCount: 312,
+    badge: "100% Herbal Cleanser",
+    netQuantity: "250 ml Bottle",
+    tagline: "Amla, Aritha & Shikakai • Chemical-Free Scalp Clarifier",
+    description: "An authentic, sulfate-free Ayurvedic hair cleanser prepared with handpicked Amla, froth-rich Aritha (Soapnut), and nutrient-rich Shikakai pods. Gently cleanses buildup, clarifies excess oil and stubborn flakes, and strengthens weak roots without stripping your hair's essential moisture.",
+    keyIngredients: [
+      { name: "Amla (Indian Gooseberry)", role: "Strengthens follicles with Vitamin C and prevents premature shedding" },
+      { name: "Aritha (Reetha / Soapnut)", role: "Produces a rich, natural herbal lather that gently dissolves dirt and grease" },
+      { name: "Shikakai Pods", role: "Natural detangler with low pH that softens hair and adds lustrous bounce" }
+    ],
+    benefits: [
+      "Cleanses scalp deeply without harsh sulfates or parabens",
+      "Noticeably minimizes daily hair shedding from the very first week",
+      "Combats dandruff, itchiness, and flaky scalp buildup",
+      "Leaves hair naturally silky, bouncy, and soft without chemical conditioners"
+    ],
+    howToUse: "Take an adequate amount and dilute with equal parts water. Massage thoroughly onto damp scalp and lengths until a gentle foam forms. Leave on for 1-2 minutes for herbs to absorb, then rinse cleanly with cool water.",
+    features: ["Sulfate Free", "Paraben Free", "Amla Aritha Shikakai", "Natural Hair Cleanser"],
+    inStock: true
+  },
+  {
+    id: "henna-indigo-amla-mix",
+    name: "Ashwini Henna Indigo Amla Mix Herbal Hair Pack",
+    subtitle: "100% Natural Chemical-Free Hair Colour (Natural Black)",
+    category: "haircare",
+    concerns: ["hairfall", "dandruff"],
+    price: 349,
+    originalPrice: 499,
+    image: "/products/Ashwini Henna Indigo Amla Mix Herbal Hair Pack Authentic.jpg",
+    rating: 4.9,
+    reviewsCount: 285,
+    badge: "Natural Black Colour",
+    netQuantity: "200g Pack",
+    tagline: "ಹೆಂನಾ ಇಂಡಿಗೊ ಆಮಲ ಮಿಕ್ಸ್ • 100% Natural Black Hair Pack",
+    description: "A master Ayurvedic blend combining premium Rajasthani Henna, pure Indigo leaf, and organic Amla powder. Formulated specifically to impart a rich, natural black hue to grey hair without ammonia, PPD, or peroxide, while conditioning dry scalp and stopping hair fall instantly.",
+    keyIngredients: [
+      { name: "Pure Rajasthani Henna", role: "Conditions scalp, strengthens roots, and deposits natural conditioning pigment" },
+      { name: "Organic Indigo Leaf Powder", role: "Imparts deep natural black-brown tone without chemicals" },
+      { name: "Amla (Indian Gooseberry)", role: "Fixes the herbal dye naturally while adding dark gloss and root strength" }
+    ],
+    benefits: [
+      "Imparts rich, natural black hair colour safely (ನೈಸರ್ಗಿಕ ಕಪ್ಪು ಬಣ್ಣ)",
+      "100% chemical-free: 0% Ammonia, 0% PPD, 0% Peroxide",
+      "Deep conditions rough, brittle hair for noticeable strength and shine",
+      "Controls hair fall and nourishes sensitive scalp"
+    ],
+    howToUse: "Mix required quantity with warm water (or curd/black tea decoction) into a smooth, thick paste. Let it rest for 15-30 minutes. Apply evenly from roots to tips on clean, dry hair. Cover with a shower cap and leave for 45-60 minutes. Rinse thoroughly with plain water without shampoo.",
+    features: ["100% Natural", "Chemical Free", "Natural Black Colour", "For All Hair Types"],
     inStock: true
   },
   {
@@ -198,7 +258,7 @@ export const PRODUCTS_DATA = [
     concerns: ["glowing", "pigmentation"],
     price: 429,
     originalPrice: 650,
-    image: "/products/Ashwini Glow Drops Botanical Serum.png",
+    image: "/products/Ashwini Glow Drops Face Serum Authentic Studio.jpg",
     rating: 4.9,
     reviewsCount: 178,
     badge: "Superfood Infusion",
