@@ -2,12 +2,36 @@ import React from 'react';
 
 const DEFAULT_WHATSAPP_REVIEWS = [
   {
+    name: "Adithi",
+    city: "Karnataka",
+    rating: 5,
+    verified: true,
+    product: "Rosemary Hair Oil & Anti-Hairfall Kit",
+    comment: "99% kammi agide hair fall! Before there was so much hair shedding on my comb, now it has stopped completely. Smell also tumba channagide, all your products are wonderful. Whenever you launch a new product, I will be the first to book — I am your regular customer now! Thank you!"
+  },
+  {
+    name: "Sakshi Pandit",
+    city: "Verified Buyer",
+    rating: 5,
+    verified: true,
+    product: "Bhringraj Hair Oil, Growth Powder & Lip Balm",
+    comment: "Mam your Bhringraj hair oil, hair growth powder and anti-dandruff shampoo is very good! I bought it 15 days ago and noticed visible difference. Its very effective, and the lip balm is also very nice and moisturizing."
+  },
+  {
     name: "Selvin",
     city: "Udupi, Karnataka",
     rating: 5,
     verified: true,
     product: "Rosemary Hair Oil, Manjistha & Neem Soap",
     comment: "I have been using your products for 9 months and all have given 100% results! In this generation, it makes me very happy that you make genuine chemical-free products. My dandruff cleared in the very first wash with your hair oil! Manjistha soap reduced dark spots, gave face glow and reduced tanning. For pimples, I started Neem soap 8 days ago and already got 70% results, marks are fading away. Loving you from Udupi!"
+  },
+  {
+    name: "Gurusithu",
+    city: "Mandya, Karnataka",
+    rating: 5,
+    verified: true,
+    product: "Authentic Ashwini Herbal Care",
+    comment: "Nim product ella tumba channagi ide! When I first bought, I had doubts because some sellers online sell fake items, but you responded so quickly and all your products are 100% genuine and effective. Super response and quality!"
   },
   {
     name: "Lakshmi K S",
@@ -24,6 +48,14 @@ const DEFAULT_WHATSAPP_REVIEWS = [
     verified: true,
     product: "Ashwini Herbal Kumkumadi Thailam",
     comment: "I use regular Kumkumadi Thailam daily. It reduced my dark circles, and acne marks are reduced by 75%! Truly an amazing product. Thank you so much Ashwini Herbal!"
+  },
+  {
+    name: "Aswini",
+    city: "Verified Buyer",
+    rating: 5,
+    verified: true,
+    product: "Ashwini Herbal Lip Balm",
+    comment: "Lip balm tumba channagide, olle result kottide mam! Nange tumba ishta aytu. Natural shine and completely heals dry and pigmented lips."
   },
   {
     name: "Kavitha",
