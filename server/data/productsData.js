@@ -9,7 +9,7 @@ export const PRODUCTS_DATA = [
     concerns: ["pigmentation", "glowing", "anti-aging"],
     price: 599,
     originalPrice: 899,
-    image: "/products/Kumkumadi Thailam Ayurvedic Glow Oil.png",
+    image: "/products/Ashwini Kumkumadi Thailam Authentic Studio.jpg",
     rating: 4.9,
     reviewsCount: 312,
     badge: "Ayurvedic Classic",
@@ -125,6 +125,36 @@ export const PRODUCTS_DATA = [
     ],
     howToUse: "Take an adequate amount and dilute with equal parts water. Massage thoroughly onto damp scalp and lengths until a gentle foam forms. Leave on for 1-2 minutes for herbs to absorb, then rinse cleanly with cool water.",
     features: ["Sulfate Free", "Paraben Free", "Amla Aritha Shikakai", "Natural Hair Cleanser"],
+    inStock: true
+  },
+  {
+    id: "ashwini-hibiscus-shampoo",
+    name: "Ashwini Herbal Hibiscus Shampoo",
+    subtitle: "Hibiscus Flower & Leaves for Long & Thick Healthy Hair Growth",
+    category: "haircare",
+    concerns: ["hairfall", "hair-growth"],
+    price: 349,
+    originalPrice: 449,
+    image: "/products/Ashwini Hibiscus Shampoo 200ml Authentic.jpg",
+    rating: 4.9,
+    reviewsCount: 215,
+    badge: "100% Vegan Cleanser",
+    netQuantity: "200 ml Bottle",
+    tagline: "Hibiscus Flower & Leaves • Natural Care for Strong, Healthy Hair",
+    description: "Formulated with pure freshly pressed Hibiscus flower and leaf extracts, known in Ayurveda as the premier natural conditioning herb. Rich in amino acids and mucilage, this 100% vegan, sulfate-free cleanser coats each strand to prevent breakage, induce thick new growth, and leave tresses luxuriously soft and voluminous.",
+    keyIngredients: [
+      { name: "Fresh Hibiscus Petals & Leaves", role: "Rich in amino acids and flavonoids to stimulate keratin production" },
+      { name: "Amla Fruit Extract", role: "Strengthens follicles and delays premature greying" },
+      { name: "Pure Botanical Cleansers", role: "Produces a gentle, sulfate-free lather that purifies without drying" }
+    ],
+    benefits: [
+      "Stimulates long, thick and healthy hair growth naturally",
+      "Infuses deep hydration and petal-soft bounce to dry, frizzy lengths",
+      "100% free from sulfates, parabens, silicones, and synthetic colors",
+      "100% vegan formula safe for color-treated and treated hair"
+    ],
+    howToUse: "Apply generously to wet scalp and lengths. Work into a silky botanical foam with gentle massage. Leave on for 2 minutes to let hibiscus nutrients absorb, then rinse with cool water.",
+    features: ["100% Vegan", "Sulphate Free", "Paraben Free", "Silicone Free"],
     inStock: true
   },
   {
@@ -468,7 +498,7 @@ export const PRODUCTS_DATA = [
     concerns: ["acne", "oily-skin"],
     price: 299,
     originalPrice: 399,
-    image: "/products/Gemini_Generated_Image_edmqltedmqltedmq.png",
+    image: "/products/Ashwini Neem Aloevera Face Wash Authentic Studio.jpg",
     rating: 4.7,
     reviewsCount: 310,
     badge: "Acne Defense",
@@ -608,6 +638,37 @@ export const PRODUCTS_DATA = [
     ],
     howToUse: "Lather between wet palms. Apply lather gently over face and body. Rinse with clean water.",
     features: ["Pure Manjistha Root", "100% Herbal", "Chemical Free", "Gentle Care"],
+    inStock: true
+  },
+  {
+    id: "sandal-soap-bar",
+    name: "Ashwini Herbal Sandal Soap Bar",
+    subtitle: "Kesar, Badam, Goat Milk, Sandalwood & Kasturi Turmeric Bar",
+    category: "soaps",
+    concerns: ["glowing", "pigmentation"],
+    price: 149,
+    originalPrice: 199,
+    image: "/products/Ashwini Sandal Soap Bar 100g Authentic.jpg",
+    rating: 4.9,
+    reviewsCount: 260,
+    badge: "Official MRP ₹149",
+    netQuantity: "100g Single Bar",
+    tagline: "Pure Herbs Natural Glow • For Soft, Glowing & Healthy Skin",
+    description: "An opulent Ayurvedic bathing bar handcrafted with pure Sandalwood (Chandan) powder, Kashmiri Kesar (Saffron), nourishing Badam (Almond oil), fresh Goat Milk, and Kasturi Turmeric. Gently cleanses, deeply hydrates, and gives an unmistakable luminous golden glow and sublime sandalwood fragrance with every bath.",
+    keyIngredients: [
+      { name: "Pure Sandalwood Powder", role: "Cools skin, refines pores, and imparts authentic divine aroma" },
+      { name: "Kashmiri Kesar (Saffron)", role: "Promotes natural skin luminescence and uniform skin tone" },
+      { name: "Goat Milk & Sweet Almond Oil", role: "Provides deep creamy hydration rich in natural vitamins A & D" },
+      { name: "Kasturi Turmeric", role: "Antiseptic glow booster that heals blemishes without yellow stains" }
+    ],
+    benefits: [
+      "Imparts natural golden glow and enhances skin tone (ನೈಸರ್ಗಿಕ ಹೊಳಪು)",
+      "Nourishes deeply with goat milk and sweet almond oil for velvety softness",
+      "Soothes summer heat rashes, irritation, and tanning naturally",
+      "Long-lasting calming royal sandalwood fragrance"
+    ],
+    howToUse: "Glide the rich sandalwood bar over wet skin to build a velvety creamy lather. Massage gently over face and body for 1 minute before rinsing thoroughly.",
+    features: ["Kesar & Goat Milk", "Pure Sandalwood", "Handmade Soap", "Official MRP ₹149"],
     inStock: true
   },
   {
@@ -879,6 +940,36 @@ export const PRODUCTS_DATA = [
     ],
     howToUse: "Take a coin-sized scoop of Pure Manjistha Gel on clean fingertips. Gently massage across face and neck in upward circular strokes until fully absorbed. Can be used daily in the morning after cleansing and at night as a soothing sleeping mask.",
     features: ["Paraben Free", "Silicone Free", "Non-Sticky Gel", "Suitable for All Skin Types"],
+    inStock: true
+  },
+  {
+    id: "shanka-pushpa-jelly",
+    name: "Ashwini Herbal Shanka Pushpa Jelly",
+    subtitle: "Pure Shankhpushpi & Butterfly Pea Anti-Aging Glow Jelly",
+    category: "skincare",
+    concerns: ["anti-aging", "glowing"],
+    price: 349,
+    originalPrice: 499,
+    image: "/products/Ashwini Shanka Pushpa Jelly Authentic Studio.jpg",
+    rating: 4.9,
+    reviewsCount: 172,
+    badge: "Anti-Aging Glow",
+    netQuantity: "100g Glass Jar",
+    tagline: "Shanka Pushpa Jelly • Glow with Anti Aging",
+    description: "A mesmerizing botanical jelly infused with pure Shankhpushpi (Aparajita / Butterfly Pea) blue-violet flower extract. Exceptionally rich in proanthocyanidins and polyphenols, this cooling jelly boosts collagen synthesis, smoothes fine expression lines, and locks in dewy, translucent radiance.",
+    keyIngredients: [
+      { name: "Shankhpushpi (Butterfly Pea Flower)", role: "Potent bioflavonoid antioxidant that stimulates natural collagen and elastin" },
+      { name: "Pure Aloe Vera Hydrosol", role: "Deeply hydrates the epidermal layer without greasiness" },
+      { name: "Botanical Glycerin & Vitamin E", role: "Plumps skin and reinforces moisture retention barrier" }
+    ],
+    benefits: [
+      "Fights premature aging and improves skin elasticity (ಆಂಟಿ-ಏಜಿಂಗ್ ಗ್ಲೋ)",
+      "Reduces fine lines and leaves skin visibly plump, firm, and dewy",
+      "Soothes irritated, sun-stressed, or tired skin with an instant cooling effect",
+      "100% non-sticky, quick-absorbing water jelly texture suitable for all skin types"
+    ],
+    howToUse: "Apply a nickel-sized amount onto freshly cleansed face and neck. Gently tap and massage in upward strokes until fully absorbed. Can be used as a daily moisturizer, makeup primer, or overnight sleeping jelly.",
+    features: ["Shankhpushpi Extract", "Anti-Aging Collagen Boost", "Non-Sticky Gel", "100% Pure Herbs"],
     inStock: true
   },
   {
