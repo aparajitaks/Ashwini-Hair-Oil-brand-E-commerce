@@ -435,17 +435,17 @@ export const PRODUCTS_DATA = [
   {
     id: "glow-pigmentation-day-serum",
     name: "Ashwini Glow & Pigmentation Day Serum",
-    subtitle: "Saffron, Turmeric & Neem for Oily & Acne-Prone Skin",
+    subtitle: "Suitable for Oily Skin • Radiant & Pigmentation-Free Skin",
     category: "skincare",
     concerns: ["acne", "oily-skin", "pigmentation"],
-    price: 399,
-    originalPrice: 599,
-    image: "/products/Gemini_Generated_Image_rnds3irnds3irnds.png",
-    rating: 4.7,
+    price: 349,
+    originalPrice: 499,
+    image: "/products/Ashwini Glow Pigmentation Day Serum Authentic Studio.jpg",
+    rating: 4.8,
     reviewsCount: 198,
-    badge: "Acne & Glow",
-    netQuantity: "15 ml",
-    tagline: "Clear Blemishes and Boost Radiance Simultaneously",
+    badge: "Official Label ₹349",
+    netQuantity: "15 ml Amber Dropper",
+    tagline: "Suitable for Oily Skin • For Radiant & Pigmentation-Free Skin",
     description: "Specially formulated for Indian skin prone to excess sebum, humidity breakouts, and post-acne dark marks. Combines antibacterial Neem and Kasturi Manjal with radiant Kashmiri Saffron in a water-light, fast-absorbing serum base.",
     keyIngredients: [
       { name: "Kasturi Manjal (Wild Turmeric)", role: "Antibacterial and anti-inflammatory brightening agent" },
@@ -970,6 +970,36 @@ export const PRODUCTS_DATA = [
     ],
     howToUse: "Apply a nickel-sized amount onto freshly cleansed face and neck. Gently tap and massage in upward strokes until fully absorbed. Can be used as a daily moisturizer, makeup primer, or overnight sleeping jelly.",
     features: ["Shankhpushpi Extract", "Anti-Aging Collagen Boost", "Non-Sticky Gel", "100% Pure Herbs"],
+    inStock: true
+  },
+  {
+    id: "natural-hair-removal-pack",
+    name: "Ashwini Herbal Natural Hair Removal Pack",
+    subtitle: "Painless Herbal Hair Removal with Rice Powder, Multani Mitti & Rose",
+    category: "skincare",
+    concerns: ["glowing", "pigmentation"],
+    price: 299,
+    originalPrice: 399,
+    image: "/products/Ashwini Herbal Hair Removal Pack Authentic Studio.jpg",
+    rating: 4.9,
+    reviewsCount: 164,
+    badge: "100% Painless • 100g",
+    netQuantity: "100g Stand-up Pouch",
+    tagline: "Smooth Skin • Painless • Easy to Use • Pure Herbs, Pure Care",
+    description: "An authentic, 100% herbal painless hair removal formulation expertly prepared with fine Rice Powder (ರೈಸ್ ಪೌಡರ್), pure Multani Mitti (ಮುಲ್ತಾನಿ ಮಿಟ್ಟಿ), and organic Rose petal powder (ರೋಸ್ ಪೌಡರ್). Gently weakens hair roots without razor cuts, chemical burns, or painful waxing, leaving skin silky soft, blemish-free, and visibly glowing.",
+    keyIngredients: [
+      { name: "Fine Rice Powder (ರೈಸ್ ಪೌಡರ್)", role: "Softens coarse hair shafts and gently micro-exfoliates dead skin" },
+      { name: "Pure Multani Mitti (ಮುಲ್ತಾನಿ ಮಿಟ್ಟಿ)", role: "Draws out impurities, tightens pores, and soothes skin during hair removal" },
+      { name: "Organic Rose Petal Powder (ರೋಸ್ ಪೌಡರ್)", role: "Calms sensitivity, prevents redness, and leaves skin smooth and fragrant" }
+    ],
+    benefits: [
+      "100% painless and easy hair removal at home — zero waxing pain or razor bumps",
+      "Leaves skin petal-soft, smooth, and naturally brightened (Smooth Skin • Painless)",
+      "Chemical-free, ammonia-free, and safe for arms, legs, underarms, and body",
+      "Slows down hair regrowth over consistent usage"
+    ],
+    howToUse: "Take 2-3 tablespoons and mix with water or rose water to form a smooth, spreadable paste. Apply an even layer in the direction of hair growth. Leave on for 10-15 minutes until semi-dry. Using a damp cloth or sponge, gently wipe off in the opposite direction of hair growth. Rinse thoroughly with cool water.",
+    features: ["100% Natural & Herbal", "Painless Hair Removal", "Rice & Multani Mitti", "Zero Chemicals"],
     inStock: true
   },
   {
