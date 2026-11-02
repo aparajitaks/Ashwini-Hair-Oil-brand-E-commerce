@@ -577,36 +577,40 @@ export const COUPONS_DATA = [
 
 export const TESTIMONIALS_DATA = [
   {
-    name: "Deepa Ramachandran",
-    city: "Bengaluru",
+    name: "Selvin",
+    city: "Udupi, Karnataka",
     rating: 5,
     verified: true,
-    product: "Ashwini Herbal Rosemary Black Hair Oil",
-    comment: "I was suffering from postpartum hair loss for 6 months. Within 4 weeks of using Ashwini Rosemary Oil, hair fall reduced by 80% and tiny baby hairs started growing on my temples! The herbal aroma is authentic and relaxing."
+    product: "Rosemary Hair Oil, Manjistha & Neem Soap",
+    source: "WhatsApp Chat",
+    comment: "I have been using your products for 9 months and all have given 100% results! In this generation, it makes me very happy that you make genuine chemical-free products. My dandruff cleared in the very first wash with your hair oil! Manjistha soap reduced dark spots, gave face glow and reduced tanning. For pimples, I started Neem soap 8 days ago and already got 70% results, marks are fading away. Loving you from Udupi!"
   },
   {
-    name: "Dr. Kavita Hegde",
-    city: "Mangaluru",
+    name: "Lakshmi K S",
+    city: "Tumkur, Karnataka",
     rating: 5,
     verified: true,
-    product: "Pigmentation Day Cream & Night Cream Duo",
-    comment: "Being a dermatologist, I am very cautious about what I put on my skin. Ashwini's Manjistha Face Wash and Duo Cream faded my stubborn sun pigmentation without irritating my sensitive skin. Genuine Ayurvedic craft!"
+    product: "Ashwini Herbal Black Henna",
+    source: "WhatsApp Chat",
+    comment: "Black henna use madide tumba chenagi result bantu. Your product is 100% natural, nange tumba satisfaction aytu mam. Really it's worth our money! Highly recommended for everyone looking for pure herbal care."
   },
   {
-    name: "Ananya Deshmukh",
-    city: "Pune",
+    name: "Ani",
+    city: "Bengaluru, Karnataka",
     rating: 5,
     verified: true,
-    product: "Coffee Glow Soap (Pack of 3)",
-    comment: "The pack of 3 for ₹449 with free shipping is unbelievable value. It completely removed my stubborn motorcycle tanning from my hands and arms in just 2 weeks. Smells like freshly brewed coffee!"
+    product: "Ashwini Herbal Kumkumadi Thailam",
+    source: "WhatsApp Chat",
+    comment: "I use regular Kumkumadi Thailam daily. It reduced my dark circles, and acne marks are reduced by 75%! Truly an amazing product. Thank you so much Ashwini Herbal!"
   },
   {
-    name: "Pooja & Karthik",
-    city: "Mysuru",
+    name: "Kavitha",
+    city: "Karnataka",
     rating: 5,
     verified: true,
-    product: "Ashwini Baby Care Complete Trio",
-    comment: "We used Ashwini Baby Massage Oil and gentle soap for our 3-month-old daughter. Her skin is so soft, supple and glows like a flower. No chemicals, pure almond and kesari. Highly recommended for all mothers!"
+    product: "Manjistha & Coffee Glow Soaps",
+    source: "WhatsApp Chat",
+    comment: "Your Manjistha and Coffee soap is really good mam! Faded tanning and skin feels so soft and refreshed. Now ordering the complete hair care kit with hair oil and herbal shampoo too!"
   }
 ];
 
