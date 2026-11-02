@@ -5,6 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import { connectDB, getDBStatus } from './config/db.js';
+import { PRODUCTS_DATA } from './data/productsData.js';
 
 import productRoutes from './routes/productRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
@@ -50,7 +51,7 @@ app.get('/api/health', (req, res) => {
     timestamp: new Date().toISOString(),
     service: 'Ashwini Herbal Backend API',
     mongoDB: getDBStatus() ? 'Connected' : 'Memory-Fallback-Mode',
-    totalProducts: 18
+    totalProducts: PRODUCTS_DATA.length
   });
 });
 

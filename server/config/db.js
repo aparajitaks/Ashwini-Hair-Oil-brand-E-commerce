@@ -34,18 +34,19 @@ export const autoSeedDatabase = async () => {
   if (!isConnected) return;
 
   try {
-    const count = await Product.countDocuments();
-    if (count === 0) {
-      console.log('🌱 Seeding initial 18 authentic Ashwini Herbal products into MongoDB...');
-      await Product.insertMany(PRODUCTS_DATA);
-      console.log('✅ Successfully seeded products collection.');
+    for (const prod of PRODUCTS_DATA) {
+      await Product.findOneAndUpdate(
+        { id: prod.id },
+        { $set: prod },
+        { upsert: true, new: true }
+      );
     }
+    console.log(`Successfully synced ${PRODUCTS_DATA.length} authentic Ashwini Herbal products into MongoDB.`);
 
     const couponCount = await Coupon.countDocuments();
     if (couponCount === 0) {
-      console.log('🌱 Seeding initial coupons into MongoDB...');
       await Coupon.insertMany(COUPONS_DATA);
-      console.log('✅ Successfully seeded coupons collection.');
+      console.log('Successfully seeded coupons collection.');
     }
   } catch (err) {
     console.error('Error during auto-seed:', err.message);

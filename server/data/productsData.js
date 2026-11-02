@@ -550,6 +550,127 @@ export const PRODUCTS_DATA = [
     howToUse: "Daily: Cleanse with Coffee Glow Soap, apply Day Glowing Cream. Weekly: Mix Face Glowing Pack with rose water or raw milk, apply for 15 minutes and rinse.",
     features: ["4-in-1 Complete Hamper", "Includes 2 Soaps", "Ayurvedic Luxury", "Free Express Delivery"],
     inStock: true
+  },
+  {
+    id: "ashwini-lip-balm",
+    name: "Ashwini Herbal Tinted Lip Balm",
+    subtitle: "Beetroot & Pure Almond Oil for Soft, Smooth & Pink Lips",
+    category: "skincare",
+    concerns: ["glowing", "pigmentation"],
+    price: 199,
+    originalPrice: 299,
+    image: "/products/Ashwini Herbal Lip Balm Soft Pink Lips.jpg",
+    rating: 4.9,
+    reviewsCount: 184,
+    badge: "Bestseller • 15g",
+    netQuantity: "15g Glass Jar",
+    tagline: "100% Pure Herbal Nutrition for Natural Rosy, Supple Lips",
+    description: "Enriched with pure wild Beetroot extracts, sweet Virgin Almond oil, and organic Shea butter. Deeply hydrates chapped lips, cures dry peeling, and reverses dark lip pigmentation caused by sun and cosmetics to reveal natural baby-soft, healthy pink lips with a subtle herbal tint.",
+    keyIngredients: [
+      { name: "Wild Beetroot Extract", role: "Natural pink tint & antioxidant that lightens lip pigmentation" },
+      { name: "Virgin Sweet Almond Oil", role: "Rich in Vitamin E to heal chapped, dry and cracked lips" },
+      { name: "Organic Shea & Cocoa Butter", role: "Locks in 12-hour deep moisture barrier" },
+      { name: "Pure Beeswax", role: "Protects delicate lip tissue from sun tanning & windburn" }
+    ],
+    benefits: [
+      "Visibly brightens dark, pigmented and dull lips to healthy pink",
+      "Instant 12-hour hydration without sticky or chemical residue",
+      "Handmade with edible herbal ingredients — 100% safe & chemical-free",
+      "Delivers a subtle natural rosy glass glow"
+    ],
+    howToUse: "Take a small pinch on your fingertip and glide smoothly over clean lips. Reapply whenever lips feel dry or before bedtime as an intensive overnight lip sleeping mask.",
+    features: ["100% Edible Grade", "Beetroot Tint", "Chemical & Lead Free", "For Men & Women"],
+    inStock: true
+  },
+  {
+    id: "natural-indigo-powder",
+    name: "Ashwini Herbal Natural Indigo Leaf Powder",
+    subtitle: "100% Pure Organic Plant-Based Natural Black Hair Colour",
+    category: "haircare",
+    concerns: ["hairfall", "hair-growth"],
+    price: 349,
+    originalPrice: 499,
+    image: "/products/Ashwini Herbal Indigo Natural Colour Powder.jpg",
+    rating: 4.9,
+    reviewsCount: 268,
+    badge: "100% Natural • 100g",
+    netQuantity: "100g Pouch",
+    tagline: "Zero PPD • Zero Ammonia • Pure Plant-Based Black Hair Transformation",
+    description: "Harvested from pristine Indigofera Tinctoria crops and micro-pulverized for maximum dye release. Designed as the ultimate natural partner to Black Henna, this 100% chemical-free leaf powder imparts a rich, glossy, dark natural black shade to grey hair while deeply conditioning roots without scalp burning or itching.",
+    keyIngredients: [
+      { name: "100% Pure Indigofera Tinctoria Leaf Powder", role: "Natural plant indigo pigment that colors hair rich natural black" },
+      { name: "Amla & Hibiscus Leaf Boosters", role: "Enhance pigment binding and leave strands silky & shiny" }
+    ],
+    benefits: [
+      "Colors grey and white hair into deep, natural black without harsh dyes",
+      "Completely free from PPD, ammonia, peroxides, and heavy metals",
+      "Prevents premature greying and strengthens thinning hair shafts",
+      "Leaves hair voluminous, conditioned, and soft — not dry or frizzy"
+    ],
+    howToUse: "Mix required amount of Indigo powder with warm water into a smooth paste. Let it activate for 10-15 minutes. Apply thoroughly onto clean, henna-treated or damp hair. Leave on for 60-90 minutes, then rinse cleanly with water without chemical shampoo.",
+    features: ["100% Organic Indigo", "Zero PPD & Ammonia", "Safe on Sensitive Scalps", "Natural Conditioning"],
+    inStock: true
+  },
+  {
+    id: "pure-manjistha-gel",
+    name: "Ashwini Herbal Pure Manjistha Gel",
+    subtitle: "Ayurvedic Glow & Pigmentation Face & Body Gel",
+    category: "skincare",
+    concerns: ["pigmentation", "glowing", "acne"],
+    price: 399,
+    originalPrice: 599,
+    image: "/products/Ashwini Pure Manjistha Gel.jpg",
+    rating: 4.9,
+    reviewsCount: 215,
+    badge: "Glow & Pigmentation • 100g",
+    netQuantity: "100g Amber Jar",
+    tagline: "Natural Touch, Pure & Safe • Helps Reduce Pigmentation & Brightens Naturally",
+    description: "A potent classical Ayurvedic skin clarifier infused with concentrated Rubia Cordifolia (Manjistha root), pure aloe vera hydrosol, and botanical antioxidants. Lightweight and non-greasy, this gel penetrates deeply to inhibit excess melanin, fade stubborn melasma and sun tanning, soothe redness, and revive youthful luminescence.",
+    keyIngredients: [
+      { name: "Pure Manjistha (Rubia Cordifolia) Extract", role: "Revered Ayurvedic root that clarifies dark spots & restores complexion" },
+      { name: "Organic Aloe Vera Leaf Gel", role: "Hydrates, calms inflammation and delivers refreshing dermal cooling" },
+      { name: "Rose Water & Botanical Glycerin", role: "Balances natural moisture and balances skin texture" }
+    ],
+    benefits: [
+      "Visibly reduces facial pigmentation, blemishes, and stubborn acne scars",
+      "Natural cooling and calming action on sun-exposed and sensitive skin",
+      "100% paraben-free and silicone-free lightweight water-gel texture",
+      "Suitable for all skin types, especially oily and combination skin"
+    ],
+    howToUse: "Take a coin-sized scoop of Pure Manjistha Gel on clean fingertips. Gently massage across face and neck in upward circular strokes until fully absorbed. Can be used daily in the morning after cleansing and at night as a soothing sleeping mask.",
+    features: ["Paraben Free", "Silicone Free", "Non-Sticky Gel", "Suitable for All Skin Types"],
+    inStock: true
+  },
+  {
+    id: "kuppameni-neem-soap",
+    name: "Ashwini Herbal Kuppameni with Neem Soap",
+    subtitle: "Handcrafted Herbal Soap for Pimples Removal & Skin Infections",
+    category: "soaps",
+    concerns: ["acne", "oily-skin"],
+    price: 179,
+    originalPrice: 249,
+    image: "/products/Ashwini Kuppameni with Neem Soap Bar.jpg",
+    rating: 4.9,
+    reviewsCount: 342,
+    badge: "Pimple & Infection Clear • 100g",
+    netQuantity: "100g Single Bar",
+    tagline: "Reduces Pimples & Acne • Clears Skin Infections • Soothes Redness",
+    description: "An ancient South Indian dermatological remedy combining pure Kuppameni (Indian Acalypha) and medicinal Neem. Cold-processed by hand with virgin coconut oil, this antibacterial bathing bar actively purges acne-causing microbes, relieves fungal itchiness, rashes and body acne, while keeping the skin barrier calm and hydrated.",
+    keyIngredients: [
+      { name: "Kuppameni (Acalypha Indica)", role: "Traditional herb that cures fungal irritation, eczema, and recurring acne" },
+      { name: "Pure Medicinal Neem", role: "Antibacterial power that purges infected pores and stops breakout cycles" },
+      { name: "Cold-Pressed Virgin Coconut Oil", role: "Ensures rich creamy lather without stripping skin moisture" },
+      { name: "Natural Herbal Actives", role: "Soothes redness, allergic itching, and accelerates healing" }
+    ],
+    benefits: [
+      "Rapid action on face pimples, back acne, and fungal skin infections",
+      "Relieves allergic itching, redness, prickly heat and body odor",
+      "Handmade, cold-processed bar with zero parabens and zero SLS",
+      "Safe and gentle for daily face and full-body bathing"
+    ],
+    howToUse: "Wet skin with lukewarm water. Lather the Kuppameni Neem soap between wet hands or directly onto face and body. Gently massage the creamy herbal foam for 60 seconds to let the herbs work, then rinse cleanly.",
+    features: ["Handmade with Care", "SLS & Paraben Free", "100% Pure Herbal", "Net Wt: 100g"],
+    inStock: true
   }
 ];
 
