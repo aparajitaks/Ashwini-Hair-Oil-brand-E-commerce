@@ -158,6 +158,68 @@ export const PRODUCTS_DATA = [
     inStock: true
   },
   {
+    id: "bhringraj-hair-oil",
+    name: "Ashwini Herbal Bhringraj Hair Oil",
+    subtitle: "Enriched with 20+ Herbs for Strong & Healthy Hair",
+    category: "haircare",
+    concerns: ["hairfall", "hair-growth", "dandruff"],
+    price: 449,
+    originalPrice: 599,
+    image: "/products/Ashwini Bhringraj Hair Oil 20 Herbs Authentic.jpg",
+    rating: 4.9,
+    reviewsCount: 388,
+    badge: "20+ Herbs Enriched",
+    netQuantity: "200 ml Bottle",
+    tagline: "Nature's Touch, Lasting Care • Nourishes, Strengthens & Promotes Growth",
+    description: "An authentic, slow-brewed Ayurvedic hair elixir prepared with over 20 potent medicinal herbs led by wild Bhringraj (Eclipta Alba), fresh Amla, Hibiscus, and Brahmi. Re-activates dormant roots, deeply nourishes hair strands, and gives visible hair fall reduction in as little as 1-2 weeks.",
+    keyIngredients: [
+      { name: "Pure Bhringraj", role: "Revered as Keshraj, stimulates cellular regeneration at hair follicles" },
+      { name: "Fresh Amla", role: "High natural Vitamin C strengthens roots and prevents greying" },
+      { name: "Hibiscus Petals & Leaves", role: "Rich in amino acids, conditions dry shafts and adds radiant gloss" },
+      { name: "20+ Botanical Herbs", role: "Soothes scalp irritation, balances excess heat, and prevents dandruff" }
+    ],
+    benefits: [
+      "Visibly reduces hair fall within 10 to 14 days of regular massage",
+      "Accelerates healthy new hair growth and thickens thinning strands",
+      "Relieves daily stress and promotes sound, peaceful sleep when applied at bedtime",
+      "100% natural, chemical-free, mineral oil free Ayurvedic recipe"
+    ],
+    howToUse: "Pour a generous amount onto palms and massage into scalp in gentle circular motions for 5-10 minutes. Leave on for minimum 1-2 hours or overnight for deep botanical penetration. Wash with Ashwini Herbal Shampoo.",
+    features: ["20+ Ayurvedic Herbs", "Pure Bhringraj Formula", "Mineral Oil Free", "For Men & Women"],
+    inStock: true
+  },
+  {
+    id: "hair-growth-powder-mask",
+    name: "Ashwini Hair Growth Powder Hair Mask",
+    subtitle: "Pure Botanical Hair Mask with Bhringraj, Amla, Hibiscus & Brahmi",
+    category: "haircare",
+    concerns: ["hairfall", "hair-growth", "dandruff"],
+    price: 299,
+    originalPrice: 449,
+    image: "/products/Ashwini Hair Growth Powder Hair Mask 100g Authentic.jpg",
+    rating: 4.9,
+    reviewsCount: 240,
+    badge: "Instant Hairfall Stop",
+    netQuantity: "100g Kraft Pouch",
+    tagline: "100% Natural Hair Mask • Strengthens Roots & Adds Luminous Shine",
+    description: "A potent Ayurvedic herbal powder mask crafted with 5 clinically revered botanicals: Bhringraj, Amla, Hibiscus, Brahmi, and Rosemary. As verified by countless customer reviews, just a single weekly treatment deeply revitalizes depleted follicles, arrests acute hair fall, and leaves locks noticeably thicker and softer.",
+    keyIngredients: [
+      { name: "Bhringraj & Brahmi", role: "Deeply fortifies weak root anchors and relieves scalp tension" },
+      { name: "Organic Amla", role: "Rich antioxidant shield preventing strand thinning and premature greying" },
+      { name: "Hibiscus Flowers", role: "Infuses plant keratin and natural slip for silkier detangling" },
+      { name: "Rosemary Leaves", role: "Enhances micro-circulation across the crown and scalp" }
+    ],
+    benefits: [
+      "Stops severe hair breakage and shedding from the very first application",
+      "Clears stubborn dandruff buildup and cools inflamed scalp",
+      "Restores natural volume, bounce, and healthy dark luster to dull hair",
+      "100% pure, chemical-free herbal powder — zero preservatives or additives"
+    ],
+    howToUse: "Mix 2-3 tablespoons with warm water, curd, or aloe vera gel into a smooth paste. Apply from roots to ends. Leave on for 30-45 minutes. Rinse cleanly with plain water or mild Ashwini Shampoo.",
+    features: ["100% Natural Herbal", "Chemical Free", "Bhringraj & Brahmi", "Zero Preservatives"],
+    inStock: true
+  },
+  {
     id: "herbal-hair-care-collection",
     name: "Ashwini Herbal Hair Care Complete Trio",
     subtitle: "Hair Oil (200ml) + Shampoo (200ml) + Growth Powder Mask (100g)",
@@ -186,6 +248,64 @@ export const PRODUCTS_DATA = [
     ],
     howToUse: "Step 1: Oil scalp with Hair Oil and leave overnight. Step 2: Mix 2 spoons of Hair Mask powder with Aloe Gel/water, apply for 30 mins once a week. Step 3: Wash cleanly with Natural Herbs Shampoo.",
     features: ["Complete 3-Step Routine", "Sulphate & Paraben Free", "High Value Combo", "100% Natural"],
+    inStock: true
+  },
+  {
+    id: "anti-dandruff-hairfall-duo",
+    name: "Ashwini Herbal Anti-Dandruff & Hair Fall Duo",
+    subtitle: "Bhringraj Hair Oil (200ml) + Amla Aritha Shikakai Shampoo (200ml)",
+    category: "combos",
+    concerns: ["hairfall", "dandruff", "hair-growth"],
+    price: 649,
+    originalPrice: 899,
+    image: "/products/Ashwini Hairfall Control Oil Shampoo Duo Authentic.jpg",
+    rating: 4.9,
+    reviewsCount: 310,
+    badge: "Bestseller Duo",
+    netQuantity: "2-Piece Hair Kit (200ml + 200ml)",
+    tagline: "Complete 2-Step Anti-Dandruff & Root Strengthening Routine",
+    description: "The complete Ayurvedic ritual for healthy, dandruff-free hair. Pair Ashwini's 20+ Herbs Bhringraj Hair Oil for root nourishment with the Amla, Aritha & Shikakai Shampoo for gentle chemical-free scalp cleansing. Loved by thousands of happy families across Karnataka.",
+    keyIngredients: [
+      { name: "20+ Herbs Bhringraj Oil", role: "Strengthens roots and eliminates flakes at follicle base" },
+      { name: "Amla, Aritha & Shikakai Cleanser", role: "Sulfate-free botanical lather that washes away impurities cleanly" }
+    ],
+    benefits: [
+      "Proven 2-step solution targeting root causes of hair loss and dandruff",
+      "Leaves hair silky, voluminous, and glossy without synthetic conditioners",
+      "Chemical-free, safe for everyday family use",
+      "Save ₹250 compared to individual purchases"
+    ],
+    howToUse: "Step 1: Massage Bhringraj Hair Oil into scalp and leave for 2 hours or overnight. Step 2: Wash thoroughly with Ashwini Shampoo.",
+    features: ["2-Piece Routine", "Sulfate Free", "20+ Herbs Enriched", "Family Favorite"],
+    inStock: true
+  },
+  {
+    id: "hibiscus-hair-growth-duo",
+    name: "Ashwini Hibiscus Hair Growth & Nourishment Duo",
+    subtitle: "Bhringraj Hair Oil (200ml) + Hibiscus Flower & Leaves Shampoo (200ml)",
+    category: "combos",
+    concerns: ["hairfall", "hair-growth"],
+    price: 679,
+    originalPrice: 949,
+    image: "/products/Ashwini Hibiscus Shampoo Bhringraj Oil Duo Authentic.jpg",
+    rating: 4.9,
+    reviewsCount: 195,
+    badge: "Thick Hair Growth",
+    netQuantity: "2-Piece Hair Kit (200ml + 200ml)",
+    tagline: "For Long, Thick & Healthy Hair Growth • 100% Vegan Care",
+    description: "A deeply nourishing hair combo pairing Ashwini Bhringraj Hair Oil with our Hibiscus Flower & Leaves Shampoo. Specially formulated for long, thick hair growth, this vegan duo floods the scalp with botanical amino acids to restore brittle strands and induce thick regrowth.",
+    keyIngredients: [
+      { name: "Hibiscus Flower & Leaves Extract", role: "Natural amino acids and flavonoids stimulate thick strand growth" },
+      { name: "Bhringraj & Amla Oil", role: "Nourishes roots and locks in dark moisture" }
+    ],
+    benefits: [
+      "Formulated specifically for thick, long hair growth",
+      "Infuses natural bounce and silky sheen to dry, frizzy lengths",
+      "100% vegan, paraben-free, sulfate-free and silicone-free",
+      "Save ₹270 with combo pricing"
+    ],
+    howToUse: "Massage Bhringraj Hair Oil into roots. Leave for 1-2 hours. Lather with Hibiscus Shampoo and rinse with cool water.",
+    features: ["Hibiscus Enriched", "100% Vegan", "Sulphate & Silicone Free", "Thick Hair Growth"],
     inStock: true
   },
   {
@@ -670,6 +790,36 @@ export const PRODUCTS_DATA = [
     ],
     howToUse: "Take a small pinch on your fingertip and glide smoothly over clean lips. Reapply whenever lips feel dry or before bedtime as an intensive overnight lip sleeping mask.",
     features: ["100% Edible Grade", "Beetroot Tint", "Chemical & Lead Free", "For Men & Women"],
+    inStock: true
+  },
+  {
+    id: "eyebrow-growth-roller",
+    name: "Ashwini Herbal Eyebrow Growth Roller",
+    subtitle: "Herbal Oils Blend for Thicker, Fuller Eyebrows & Lashes",
+    category: "skincare",
+    concerns: ["hair-growth", "glowing"],
+    price: 299,
+    originalPrice: 399,
+    image: "/products/Ashwini Eyebrow Growth Roller 10ml Authentic.jpg",
+    rating: 4.9,
+    reviewsCount: 145,
+    badge: "Official Label ₹299",
+    netQuantity: "10 ml Rollerball Vial",
+    tagline: "Pure Herbal Oils Blend for Naturally Dense, Defined Eyebrows",
+    description: "An easy-to-use, mess-free rollerball infused with concentrated cold-pressed Castor oil, Rosemary extract, Sweet Almond oil, and Vitamin E. Designed to stimulate dormant brow follicles, repair over-plucked areas, and promote naturally dense, defined eyebrows.",
+    keyIngredients: [
+      { name: "Virgin Cold-Pressed Castor Oil", role: "Ricinoleic acid triggers accelerated follicle density" },
+      { name: "Rosemary Botanical Extract", role: "Stimulates micro-circulation for faster brow regrowth" },
+      { name: "Sweet Almond Oil & Vitamin E", role: "Conditions delicate brow hairs to prevent breakage" }
+    ],
+    benefits: [
+      "Fills in sparse, over-plucked brows naturally within 3-4 weeks",
+      "Convenient steel rollerball allows precise, mess-free application",
+      "Strengthens brow hair roots and prevents thinning",
+      "100% natural and safe for daily bedtime use"
+    ],
+    howToUse: "Gently glide the rollerball over clean, dry eyebrows before going to sleep. Lightly massage with fingertips in the direction of hair growth. Leave on overnight.",
+    features: ["10ml Rollerball", "Castor & Rosemary Blend", "Mess-Free Application", "100% Natural"],
     inStock: true
   },
   {
