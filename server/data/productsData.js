@@ -167,7 +167,7 @@ export const PRODUCTS_DATA = [
     concerns: ["pigmentation", "glowing", "anti-aging"],
     price: 499,
     originalPrice: 699,
-    image: "/products/Gemini_Generated_Image_ihjzb8ihjzb8ihjz.png",
+    image: "/products/Ashwini Night Cream Studio Pedestal 50g.jpg",
     rating: 4.8,
     reviewsCount: 142,
     badge: "Overnight Miracle",
@@ -342,6 +342,36 @@ export const PRODUCTS_DATA = [
     inStock: true
   },
   {
+    id: "coffee-glow-soap-bar",
+    name: "Ashwini Coffee Glow Soap Bar",
+    subtitle: "Tan Removal & Skin Brightening Exfoliating Bar",
+    category: "soaps",
+    concerns: ["glowing", "pigmentation"],
+    price: 179,
+    originalPrice: 249,
+    image: "/products/Ashwini Coffee Glow Soap Bar 100g Authentic.jpg",
+    rating: 4.9,
+    reviewsCount: 168,
+    badge: "100g Single Bar",
+    netQuantity: "100g Single Bar",
+    tagline: "Natural Tan Removal & Skin Brightening Artisan Bar",
+    description: "Crafted with freshly ground aromatic Arabica coffee granules, pure coconut oil, and nourishing botanicals. Natural caffeine energizes micro-circulation and buffs away dull dead skin layers, reversing sun tanning, dark elbows, knees, and uneven skin tone for an instant morning glow.",
+    keyIngredients: [
+      { name: "Pure Arabica Coffee Granules", role: "Gently exfoliates dead skin cells and stimulates micro-circulation" },
+      { name: "Cold-Pressed Coconut & Castor Oils", role: "Locks in deep moisture leaving skin silken soft" },
+      { name: "Natural Glycerin", role: "Hydrates and protects delicate skin mantle" }
+    ],
+    benefits: [
+      "Instantly buffs away stubborn sun tan and dead skin cells",
+      "Stimulates micro-circulation for an energizing radiant morning glow",
+      "Softens rough elbows, knees, and uneven texture naturally",
+      "100% natural, handmade cold-processed artisan soap"
+    ],
+    howToUse: "Glide the textured soap bar directly over wet skin in gentle circular motions. Work into a creamy lather and rinse thoroughly.",
+    features: ["Tan Removal", "Handmade Cold-Processed", "Natural Caffeine Exfoliation", "100g Bar"],
+    inStock: true
+  },
+  {
     id: "coffee-glow-soap-pack-of-3",
     name: "Ashwini Coffee Glow Soap (Pack of 3)",
     subtitle: "Tan Removal & Skin Brightening Exfoliating Bars",
@@ -379,7 +409,7 @@ export const PRODUCTS_DATA = [
     concerns: ["pigmentation", "glowing"],
     price: 179,
     originalPrice: 249,
-    image: "/products/Gemini_Generated_Image_1kss581kss581kss.png",
+    image: "/products/Ashwini Manjista Soap Bar 100g Authentic.jpg",
     rating: 4.8,
     reviewsCount: 215,
     badge: "Ayurvedic Heritage",
@@ -649,7 +679,7 @@ export const PRODUCTS_DATA = [
     concerns: ["acne", "oily-skin"],
     price: 179,
     originalPrice: 249,
-    image: "/products/Ashwini Kuppameni with Neem Soap Authentic Display.jpg",
+    image: "/products/Ashwini Kuppameni Neem Soap Studio Display.jpg",
     rating: 4.9,
     reviewsCount: 342,
     badge: "Pimple & Infection Clear • 100g",
